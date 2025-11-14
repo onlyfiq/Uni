@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1763138052 source:e:\uni\ict283 3.0\lab 10\bstfuncptr\funcptrtest.cpp
+	"Bst.h"
+	<iostream>
+
+1763140722 e:\uni\ict283 3.0\lab 10\bstfuncptr\bst.h
+	<iostream>
+
