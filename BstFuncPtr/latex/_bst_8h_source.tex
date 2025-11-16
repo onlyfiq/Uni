@@ -1,0 +1,326 @@
+\doxysection{Bst.\+h}
+\hypertarget{_bst_8h_source}{}\label{_bst_8h_source}\index{Lab 10/BstFuncPtr/Bst.h@{Lab 10/BstFuncPtr/Bst.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BST\_H\_INCLUDED}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BST\_H\_INCLUDED}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ }std::cout;}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ }std::endl;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bst}{Bst}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_bst_ac9124c96ba73bebfbe93a1179908292a}{Bst}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_bst_ac70fe9f8cfede8f34f74d3105544760e}{\string~Bst}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_bst_ac9124c96ba73bebfbe93a1179908292a}{Bst}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bst}{Bst}}\&\ other);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_bst}{Bst}}\&\ \mbox{\hyperlink{class_bst_af0e4e350a2b056e9ad8211f4bc9de407}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bst}{Bst}}\&\ other);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bst_a0ea4c71d9f2dc2ea0dbfb367b0da3550}{Insert}}(\textcolor{keyword}{const}\ T\&\ value);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_bst_a837929f7e97137b80480638f2637b226}{Search}}(\textcolor{keyword}{const}\ T\&\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bst_ae3ecac082cc1d95144638291e6926503}{DeleteTree}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bst_a5f347ed1e8bbae3e46a53b0e26917277}{DeleteNode}}(\textcolor{keyword}{const}\ T\&\ value);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bst_a2e0ce4aad5684fd73452d7c895f0fdd3}{InOrder}}(\textcolor{keywordtype}{void}\ (*func)(\textcolor{keyword}{const}\ T\&))\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bst_af9fc2a03947318a8d7892c6df81f4210}{PreOrder}}(\textcolor{keywordtype}{void}\ (*func)(\textcolor{keyword}{const}\ T\&))\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bst_a4f8aaab4830bbd7b703d909f81a5089d}{PostOrder}}(\textcolor{keywordtype}{void}\ (*func)(\textcolor{keyword}{const}\ T\&))\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_bst_a71ad8ec880fec279198ac090495a3738}{DebugCheckInvariant}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keyword}{struct\ }Node}
+\DoxyCodeLine{00119\ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ T\ data;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ Node*\ left;\ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ Node*\ right;\ \ \ }
+\DoxyCodeLine{00123\ \ \ \ \ \};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ Node*\ root;\ \ }
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//\ ======================\ Helper\ Functions\ ======================}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00135\ \ \ \ \ Node*\ insert(Node*\ node,\ \textcolor{keyword}{const}\ T\&\ value);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{bool}\ search(Node*\ node,\ \textcolor{keyword}{const}\ T\&\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ inOrder(Node*\ node,\ \textcolor{keywordtype}{void}\ (*func)(\textcolor{keyword}{const}\ T\&))\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ preOrder(Node*\ node,\ \textcolor{keywordtype}{void}\ (*func)(\textcolor{keyword}{const}\ T\&))\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ postOrder(Node*\ node,\ \textcolor{keywordtype}{void}\ (*func)(\textcolor{keyword}{const}\ T\&))\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{void}\ deleteTree(Node*\ node);}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00178\ \ \ \ \ Node*\ deleteNode(Node*\ node,\ \textcolor{keyword}{const}\ T\&\ value);}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00185\ \ \ \ \ Node*\ copyTree(Node*\ node);}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{bool}\ checkInvariant(Node*\ node)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00193\ \};}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \textcolor{comment}{//\ -\/-\/-\/\ Implementation\ -\/-\/-\/}}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00198\ \mbox{\hyperlink{class_bst_ac9124c96ba73bebfbe93a1179908292a}{Bst<T>::Bst}}()}
+\DoxyCodeLine{00199\ \{}
+\DoxyCodeLine{00200\ \ \ \ \ root\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00201\ \}}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00204\ \mbox{\hyperlink{class_bst_ac70fe9f8cfede8f34f74d3105544760e}{Bst<T>::\string~Bst}}()}
+\DoxyCodeLine{00205\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ deleteTree(root);}
+\DoxyCodeLine{00207\ \ \ \ \ root\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00208\ \}}
+\DoxyCodeLine{00209\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00210\ \mbox{\hyperlink{class_bst_ac9124c96ba73bebfbe93a1179908292a}{Bst<T>::Bst}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bst}{Bst}}\&\ other)}
+\DoxyCodeLine{00211\ \{}
+\DoxyCodeLine{00212\ \ \ \ \ root\ =\ copyTree(other.root);}
+\DoxyCodeLine{00213\ \}}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00216\ \textcolor{keyword}{typename}\ Bst<T>::Node*\ \mbox{\hyperlink{class_bst}{Bst<T>::copyTree}}(Node*\ node)}
+\DoxyCodeLine{00217\ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keywordflow}{if}\ (!node)}
+\DoxyCodeLine{00219\ \ \ \ \ \{}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00221\ \ \ \ \ \}}
+\DoxyCodeLine{00222\ \ \ \ \ Node*\ newNode\ =\ \textcolor{keyword}{new}\ Node\{node-\/>data,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr}\};}
+\DoxyCodeLine{00223\ \ \ \ \ newNode-\/>left\ =\ copyTree(node-\/>left);}
+\DoxyCodeLine{00224\ \ \ \ \ newNode-\/>right\ =\ copyTree(node-\/>right);}
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keywordflow}{return}\ newNode;}
+\DoxyCodeLine{00226\ \}}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00229\ \mbox{\hyperlink{class_bst}{Bst<T>}}\&\ \mbox{\hyperlink{class_bst_af0e4e350a2b056e9ad8211f4bc9de407}{Bst<T>::operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bst}{Bst}}\&\ other)}
+\DoxyCodeLine{00230\ \{}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&other)\ \ \textcolor{comment}{//\ protect\ against\ self-\/assignment}}
+\DoxyCodeLine{00232\ \ \ \ \ \{}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ deleteTree(root);}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ root\ =\ copyTree(other.root);}
+\DoxyCodeLine{00235\ \ \ \ \ \}}
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00237\ \}}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00240\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bst_a0ea4c71d9f2dc2ea0dbfb367b0da3550}{Bst<T>::Insert}}(\textcolor{keyword}{const}\ T\&\ value)}
+\DoxyCodeLine{00241\ \{}
+\DoxyCodeLine{00242\ \ \ \ \ root\ =\ insert(root,\ value);}
+\DoxyCodeLine{00243\ \}}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00246\ \textcolor{keyword}{typename}\ Bst<T>::Node*\ \mbox{\hyperlink{class_bst}{Bst<T>::insert}}(Node*\ node,\ \textcolor{keyword}{const}\ T\&\ value)}
+\DoxyCodeLine{00247\ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordflow}{if}\ (node\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00249\ \ \ \ \ \{}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ node\ =\ \textcolor{keyword}{new}\ Node\{value,\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{nullptr}\};}
+\DoxyCodeLine{00251\ \ \ \ \ \}}
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (value\ <\ node-\/>data)}
+\DoxyCodeLine{00253\ \ \ \ \ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ node-\/>left\ =\ insert(node-\/>left,\ value);}
+\DoxyCodeLine{00255\ \ \ \ \ \}}
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (value\ >\ node-\/>data)}
+\DoxyCodeLine{00257\ \ \ \ \ \{}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ node-\/>right\ =\ insert(node-\/>right,\ value);}
+\DoxyCodeLine{00259\ \ \ \ \ \}}
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordflow}{return}\ node;}
+\DoxyCodeLine{00261\ \}}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00264\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_bst_a837929f7e97137b80480638f2637b226}{Bst<T>::Search}}(\textcolor{keyword}{const}\ T\&\ value)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00265\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordflow}{return}\ search(root,\ value);}
+\DoxyCodeLine{00267\ \}}
+\DoxyCodeLine{00268\ }
+\DoxyCodeLine{00269\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00270\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_bst}{Bst<T>::search}}(Node*\ node,\ \textcolor{keyword}{const}\ T\&\ value)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00271\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keywordflow}{if}\ (node\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00273\ \ \ \ \ \{}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00275\ \ \ \ \ \}}
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (value\ ==\ node-\/>data)}
+\DoxyCodeLine{00277\ \ \ \ \ \{}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00279\ \ \ \ \ \}}
+\DoxyCodeLine{00280\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (value\ <\ node-\/>data)}
+\DoxyCodeLine{00281\ \ \ \ \ \{}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ search(node-\/>left,\ value);}
+\DoxyCodeLine{00283\ \ \ \ \ \}}
+\DoxyCodeLine{00284\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00285\ \ \ \ \ \{}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ search(node-\/>right,\ value);}
+\DoxyCodeLine{00287\ \ \ \ \ \}}
+\DoxyCodeLine{00288\ \}}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00291\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bst_ae3ecac082cc1d95144638291e6926503}{Bst<T>::DeleteTree}}()}
+\DoxyCodeLine{00292\ \{}
+\DoxyCodeLine{00293\ \ \ \ \ deleteTree(root);}
+\DoxyCodeLine{00294\ \ \ \ \ root\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00295\ \}}
+\DoxyCodeLine{00296\ }
+\DoxyCodeLine{00297\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00298\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bst}{Bst<T>::deleteTree}}(Node*\ node)}
+\DoxyCodeLine{00299\ \{}
+\DoxyCodeLine{00300\ \ \ \ \ \textcolor{keywordflow}{if}\ (node)}
+\DoxyCodeLine{00301\ \ \ \ \ \{}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ deleteTree(node-\/>left);}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ deleteTree(node-\/>right);}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ node;}
+\DoxyCodeLine{00305\ \ \ \ \ \}}
+\DoxyCodeLine{00306\ \}}
+\DoxyCodeLine{00307\ }
+\DoxyCodeLine{00308\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00309\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bst_a5f347ed1e8bbae3e46a53b0e26917277}{Bst<T>::DeleteNode}}(\textcolor{keyword}{const}\ T\&\ value)}
+\DoxyCodeLine{00310\ \{}
+\DoxyCodeLine{00311\ \ \ \ \ root\ =\ deleteNode(root,\ value);}
+\DoxyCodeLine{00312\ \}}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00315\ \textcolor{keyword}{typename}\ Bst<T>::Node*\ \mbox{\hyperlink{class_bst}{Bst<T>::deleteNode}}(Node*\ node,\ \textcolor{keyword}{const}\ T\&\ value)}
+\DoxyCodeLine{00316\ \{}
+\DoxyCodeLine{00317\ \ \ \ \ \textcolor{keywordflow}{if}\ (node\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00318\ \ \ \ \ \{}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00320\ \ \ \ \ \}}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00322\ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ <\ node-\/>data)}
+\DoxyCodeLine{00323\ \ \ \ \ \{}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ node-\/>left\ =\ deleteNode(node-\/>left,\ value);}
+\DoxyCodeLine{00325\ \ \ \ \ \}}
+\DoxyCodeLine{00326\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (value\ >\ node-\/>data)}
+\DoxyCodeLine{00327\ \ \ \ \ \{}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ node-\/>right\ =\ deleteNode(node-\/>right,\ value);}
+\DoxyCodeLine{00329\ \ \ \ \ \}}
+\DoxyCodeLine{00330\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00331\ \ \ \ \ \{}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Case\ 1:\ Leaf}}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (node-\/>left\ ==\ \textcolor{keyword}{nullptr}\ \&\&\ node-\/>right\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ node;}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ node\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Case\ 2:\ One\ child}}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (node-\/>left\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ Node*\ temp\ =\ node-\/>right;}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ node;}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ node\ =\ temp;}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (node-\/>right\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ Node*\ temp\ =\ node-\/>left;}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ node;}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ node\ =\ temp;}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Case\ 3:\ Two\ children}}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ Node*\ successor\ =\ node-\/>right;}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (successor-\/>left\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ successor\ =\ successor-\/>left;}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ node-\/>data\ =\ successor-\/>data;}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ node-\/>right\ =\ deleteNode(node-\/>right,\ successor-\/>data);}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00362\ \ \ \ \ \}}
+\DoxyCodeLine{00363\ \ \ \ \ \textcolor{keywordflow}{return}\ node;}
+\DoxyCodeLine{00364\ \}}
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00366\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00367\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bst_a2e0ce4aad5684fd73452d7c895f0fdd3}{Bst<T>::InOrder}}(\textcolor{keywordtype}{void}\ (*func)(\textcolor{keyword}{const}\ T\&))\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00368\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00369\ \ \ \ \ inOrder(root,\ func);}
+\DoxyCodeLine{00370\ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{00371\ \}}
+\DoxyCodeLine{00372\ }
+\DoxyCodeLine{00373\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00374\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bst}{Bst<T>::inOrder}}(Node*\ node,\textcolor{keywordtype}{void}\ (*func)(\textcolor{keyword}{const}\ T\&))\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00375\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00376\ \ \ \ \ \textcolor{keywordflow}{if}\ (node)}
+\DoxyCodeLine{00377\ \ \ \ \ \{}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ inOrder(node-\/>left,\ func);}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ cout\ <<\ node-\/>data\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ inOrder(node-\/>right,\ func);}
+\DoxyCodeLine{00381\ \ \ \ \ \}}
+\DoxyCodeLine{00382\ \}}
+\DoxyCodeLine{00383\ }
+\DoxyCodeLine{00384\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00385\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bst_af9fc2a03947318a8d7892c6df81f4210}{Bst<T>::PreOrder}}(\textcolor{keywordtype}{void}\ (*func)(\textcolor{keyword}{const}\ T\&))\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00386\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00387\ \ \ \ \ preOrder(root,\ func);}
+\DoxyCodeLine{00388\ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{00389\ \}}
+\DoxyCodeLine{00390\ }
+\DoxyCodeLine{00391\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00392\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bst}{Bst<T>::preOrder}}(Node*\ node,\textcolor{keywordtype}{void}\ (*func)(\textcolor{keyword}{const}\ T\&))\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00393\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00394\ \ \ \ \ \textcolor{keywordflow}{if}\ (node)}
+\DoxyCodeLine{00395\ \ \ \ \ \{}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ cout\ <<\ node-\/>data\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ preOrder(node-\/>left,\ func);}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ preOrder(node-\/>right,\ func);}
+\DoxyCodeLine{00399\ \ \ \ \ \}}
+\DoxyCodeLine{00400\ \}}
+\DoxyCodeLine{00401\ }
+\DoxyCodeLine{00402\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00403\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bst_a4f8aaab4830bbd7b703d909f81a5089d}{Bst<T>::PostOrder}}(\textcolor{keywordtype}{void}\ (*func)(\textcolor{keyword}{const}\ T\&))\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00404\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00405\ \ \ \ \ postOrder(root,\ func);}
+\DoxyCodeLine{00406\ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{00407\ \}}
+\DoxyCodeLine{00408\ }
+\DoxyCodeLine{00409\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00410\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bst}{Bst<T>::postOrder}}(Node*\ node,\textcolor{keywordtype}{void}\ (*func)(\textcolor{keyword}{const}\ T\&))\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00411\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00412\ \ \ \ \ \textcolor{keywordflow}{if}\ (node)}
+\DoxyCodeLine{00413\ \ \ \ \ \{}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ postOrder(node-\/>left,\ func);}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ postOrder(node-\/>right,\ func);}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ cout\ <<\ node-\/>data\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00417\ \ \ \ \ \}}
+\DoxyCodeLine{00418\ \}}
+\DoxyCodeLine{00419\ }
+\DoxyCodeLine{00420\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00421\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_bst_a71ad8ec880fec279198ac090495a3738}{Bst<T>::DebugCheckInvariant}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00422\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00423\ \ \ \ \ \textcolor{keywordflow}{return}\ checkInvariant(root);}
+\DoxyCodeLine{00424\ \}}
+\DoxyCodeLine{00425\ }
+\DoxyCodeLine{00426\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00427\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_bst}{Bst<T>::checkInvariant}}(Node*\ node)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00428\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{00429\ \ \ \ \ \textcolor{keywordflow}{if}\ (node\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00430\ \ \ \ \ \{}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00432\ \ \ \ \ \}}
+\DoxyCodeLine{00433\ }
+\DoxyCodeLine{00434\ \ \ \ \ \textcolor{keywordflow}{if}\ (node-\/>left\ \&\&\ node-\/>left-\/>data\ >=\ node-\/>data)}
+\DoxyCodeLine{00435\ \ \ \ \ \{}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00437\ \ \ \ \ \}}
+\DoxyCodeLine{00438\ \ \ \ \ \textcolor{keywordflow}{if}\ (node-\/>right\ \&\&\ node-\/>right-\/>data\ <=\ node-\/>data)}
+\DoxyCodeLine{00439\ \ \ \ \ \{}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00441\ \ \ \ \ \}}
+\DoxyCodeLine{00442\ }
+\DoxyCodeLine{00443\ \ \ \ \ \textcolor{keywordflow}{return}\ checkInvariant(node-\/>left)\ \&\&\ checkInvariant(node-\/>right);}
+\DoxyCodeLine{00444\ \}}
+\DoxyCodeLine{00445\ }
+\DoxyCodeLine{00446\ }
+\DoxyCodeLine{00447\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BST\_H\_INCLUDED}}
+
+\end{DoxyCode}
