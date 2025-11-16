@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1762194163 source:e:\uni\ict283 3.0\lab 10\qne\date.cpp
+	"Date.h"
+	<stdexcept>
+
+1762194163 e:\uni\ict283 3.0\lab 10\qne\date.h
+	<iostream>
+	<string>
+
+1762194163 source:e:\uni\ict283 3.0\lab 10\qne\main.cpp
+	<iostream>
+	<string>
+	"WeatherLog.h"
+
+1762194163 e:\uni\ict283 3.0\lab 10\qne\weatherlog.h
+	<string>
+	"EncapVect.h"
+	"WeatherRec.h"
+
+1762194163 e:\uni\ict283 3.0\lab 10\qne\encapvect.h
+	<iostream>
+	<stdexcept>
+	<vector>
+
+1762194163 e:\uni\ict283 3.0\lab 10\qne\weatherrec.h
+	"Date.h"
+	"Time.h"
+	<iostream>
+
+1762194163 e:\uni\ict283 3.0\lab 10\qne\time.h
+	<iostream>
+
+1762194163 source:e:\uni\ict283 3.0\lab 10\qne\time.cpp
+	"Time.h"
+	<iomanip>
+
+1762194163 source:e:\uni\ict283 3.0\lab 10\qne\weatherlog.cpp
+	"WeatherLog.h"
+	<iostream>
+	<fstream>
+	<cmath>
+	<string>
+	<sstream>
+	<stdexcept>
+
+1762194163 source:e:\uni\ict283 3.0\lab 10\qne\weatherrec.cpp
+	"WeatherRec.h"
+	<iomanip>
+

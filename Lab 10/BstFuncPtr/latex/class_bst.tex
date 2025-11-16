@@ -1,0 +1,230 @@
+\doxysection{Bst\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_bst}{}\label{class_bst}\index{Bst$<$ T $>$@{Bst$<$ T $>$}}
+
+
+A templated Binary Search Tree (BST) class.  
+
+
+
+
+{\ttfamily \#include $<$Bst.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bst_ac9124c96ba73bebfbe93a1179908292a}\label{class_bst_ac9124c96ba73bebfbe93a1179908292a} 
+{\bfseries Bst} ()
+\begin{DoxyCompactList}\small\item\em Constructs an empty BST. \end{DoxyCompactList}\item 
+\Hypertarget{class_bst_ac70fe9f8cfede8f34f74d3105544760e}\label{class_bst_ac70fe9f8cfede8f34f74d3105544760e} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Bst} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Recursively frees all nodes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bst_aaec1e64057d5a4891f2904aefbc39c9d}{Bst}} (const \mbox{\hyperlink{class_bst}{Bst}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. Performs a deep copy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bst}{Bst}} \& \mbox{\hyperlink{class_bst_af0e4e350a2b056e9ad8211f4bc9de407}{operator=}} (const \mbox{\hyperlink{class_bst}{Bst}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. Performs deep copy with cleanup. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bst_a0ea4c71d9f2dc2ea0dbfb367b0da3550}{Insert}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Inserts a new value into the BST. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_bst_a837929f7e97137b80480638f2637b226}{Search}} (const T \&value) const
+\begin{DoxyCompactList}\small\item\em Searches for a value in the BST. \end{DoxyCompactList}\item 
+\Hypertarget{class_bst_ae3ecac082cc1d95144638291e6926503}\label{class_bst_ae3ecac082cc1d95144638291e6926503} 
+void {\bfseries Delete\+Tree} ()
+\begin{DoxyCompactList}\small\item\em Removes all nodes and resets the tree to empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bst_a5f347ed1e8bbae3e46a53b0e26917277}{Delete\+Node}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Deletes a node containing the specified value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bst_a2e0ce4aad5684fd73452d7c895f0fdd3}{In\+Order}} (void(\texorpdfstring{$\ast$}{*}func)(const T \&)) const
+\begin{DoxyCompactList}\small\item\em Performs in-\/order traversal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bst_af9fc2a03947318a8d7892c6df81f4210}{Pre\+Order}} (void(\texorpdfstring{$\ast$}{*}func)(const T \&)) const
+\begin{DoxyCompactList}\small\item\em Performs pre-\/order traversal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bst_a4f8aaab4830bbd7b703d909f81a5089d}{Post\+Order}} (void(\texorpdfstring{$\ast$}{*}func)(const T \&)) const
+\begin{DoxyCompactList}\small\item\em Performs post-\/order traversal. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_bst_a71ad8ec880fec279198ac090495a3738}{Debug\+Check\+Invariant}} () const
+\begin{DoxyCompactList}\small\item\em Ensures the BST invariant holds for all nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Bst$<$ T $>$}
+A templated Binary Search Tree (BST) class. 
+
+This class provides functionality for storing elements in a binary search tree structure. Supported operations include insertion, searching, deletion, and depth-\/first traversals (in-\/order, pre-\/order, post-\/order).
+
+The type T must support \texorpdfstring{$<$}{<}, \texorpdfstring{$>$}{>}, and == comparison operators.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Data type stored inside the BST. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_bst_aaec1e64057d5a4891f2904aefbc39c9d}\label{class_bst_aaec1e64057d5a4891f2904aefbc39c9d} 
+\index{Bst$<$ T $>$@{Bst$<$ T $>$}!Bst@{Bst}}
+\index{Bst@{Bst}!Bst$<$ T $>$@{Bst$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Bst()}{Bst()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_bst}{Bst}}$<$ T $>$\mbox{\hyperlink{class_bst}{\+::\+Bst}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_bst}{Bst}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. Performs a deep copy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The BST to copy. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_bst_a71ad8ec880fec279198ac090495a3738}\label{class_bst_a71ad8ec880fec279198ac090495a3738} 
+\index{Bst$<$ T $>$@{Bst$<$ T $>$}!DebugCheckInvariant@{DebugCheckInvariant}}
+\index{DebugCheckInvariant@{DebugCheckInvariant}!Bst$<$ T $>$@{Bst$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DebugCheckInvariant()}{DebugCheckInvariant()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_bst}{Bst}}$<$ T $>$\+::\+Debug\+Check\+Invariant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Ensures the BST invariant holds for all nodes. 
+
+BST property checked\+:
+\begin{DoxyItemize}
+\item Left subtree values \texorpdfstring{$<$}{<} node value
+\item Right subtree values \texorpdfstring{$>$}{>} node value
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+True if invariant is satisfied. 
+\end{DoxyReturn}
+\Hypertarget{class_bst_a5f347ed1e8bbae3e46a53b0e26917277}\label{class_bst_a5f347ed1e8bbae3e46a53b0e26917277} 
+\index{Bst$<$ T $>$@{Bst$<$ T $>$}!DeleteNode@{DeleteNode}}
+\index{DeleteNode@{DeleteNode}!Bst$<$ T $>$@{Bst$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DeleteNode()}{DeleteNode()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_bst}{Bst}}$<$ T $>$\+::\+Delete\+Node (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Deletes a node containing the specified value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value to remove. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bst_a2e0ce4aad5684fd73452d7c895f0fdd3}\label{class_bst_a2e0ce4aad5684fd73452d7c895f0fdd3} 
+\index{Bst$<$ T $>$@{Bst$<$ T $>$}!InOrder@{InOrder}}
+\index{InOrder@{InOrder}!Bst$<$ T $>$@{Bst$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{InOrder()}{InOrder()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_bst}{Bst}}$<$ T $>$\+::\+In\+Order (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*})(const T \&)}]{func }\end{DoxyParamCaption}) const}
+
+
+
+Performs in-\/order traversal. 
+
+Order\+: Left → Root → Right
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & A function pointer applied to each visited value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bst_a0ea4c71d9f2dc2ea0dbfb367b0da3550}\label{class_bst_a0ea4c71d9f2dc2ea0dbfb367b0da3550} 
+\index{Bst$<$ T $>$@{Bst$<$ T $>$}!Insert@{Insert}}
+\index{Insert@{Insert}!Bst$<$ T $>$@{Bst$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_bst}{Bst}}$<$ T $>$\+::\+Insert (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Inserts a new value into the BST. 
+
+Duplicate values are ignored.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to insert. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bst_af0e4e350a2b056e9ad8211f4bc9de407}\label{class_bst_af0e4e350a2b056e9ad8211f4bc9de407} 
+\index{Bst$<$ T $>$@{Bst$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Bst$<$ T $>$@{Bst$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_bst}{Bst}}$<$ T $>$ \& \mbox{\hyperlink{class_bst}{Bst}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_bst}{Bst}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator. Performs deep copy with cleanup. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The BST to assign from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to \texorpdfstring{$\ast$}{*}this. 
+\end{DoxyReturn}
+\Hypertarget{class_bst_a4f8aaab4830bbd7b703d909f81a5089d}\label{class_bst_a4f8aaab4830bbd7b703d909f81a5089d} 
+\index{Bst$<$ T $>$@{Bst$<$ T $>$}!PostOrder@{PostOrder}}
+\index{PostOrder@{PostOrder}!Bst$<$ T $>$@{Bst$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PostOrder()}{PostOrder()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_bst}{Bst}}$<$ T $>$\+::\+Post\+Order (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*})(const T \&)}]{func }\end{DoxyParamCaption}) const}
+
+
+
+Performs post-\/order traversal. 
+
+Order\+: Left → Right → Root
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & A function pointer applied to each visited value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bst_af9fc2a03947318a8d7892c6df81f4210}\label{class_bst_af9fc2a03947318a8d7892c6df81f4210} 
+\index{Bst$<$ T $>$@{Bst$<$ T $>$}!PreOrder@{PreOrder}}
+\index{PreOrder@{PreOrder}!Bst$<$ T $>$@{Bst$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PreOrder()}{PreOrder()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_bst}{Bst}}$<$ T $>$\+::\+Pre\+Order (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*})(const T \&)}]{func }\end{DoxyParamCaption}) const}
+
+
+
+Performs pre-\/order traversal. 
+
+Order\+: Root → Left → Right
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & A function pointer applied to each visited value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bst_a837929f7e97137b80480638f2637b226}\label{class_bst_a837929f7e97137b80480638f2637b226} 
+\index{Bst$<$ T $>$@{Bst$<$ T $>$}!Search@{Search}}
+\index{Search@{Search}!Bst$<$ T $>$@{Bst$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_bst}{Bst}}$<$ T $>$\+::\+Search (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption}) const}
+
+
+
+Searches for a value in the BST. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to locate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if found, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Lab 10/\+Bst\+Func\+Ptr/Bst.\+h\end{DoxyCompactItemize}
