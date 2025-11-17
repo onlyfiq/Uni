@@ -18,7 +18,10 @@ public:
     bool Add(const T& value);
     bool Insert(int index, const T& value);
     bool Delete(int index);
+
     int GetSize() const;
+    bool IsEmpty() const;
+    void Clear();
 
     T& operator[](int index);
     const T& operator[](int index) const;
@@ -28,14 +31,14 @@ private:
 };
 
 template <class T>
-Vector<T>::Vector()
+Vector<T>::Vector() : m_data()
 {
 }
 
 template <class T>
-Vector<T>::Vector(int n)
+Vector<T>::Vector(int n) : m_data()
 {
-    if(n > 0)
+    if (n > 0)
     {
         m_data.resize(n);
     }
@@ -47,12 +50,12 @@ bool Vector<T>::Add(const T& value)
     try
     {
         m_data.push_back(value);
+        return true;
     }
-    catch(...)
+    catch (...)
     {
         return false;
     }
-    return true;
 }
 
 template <class T>
@@ -66,13 +69,12 @@ bool Vector<T>::Insert(int index, const T& value)
     try
     {
         m_data.insert(m_data.begin() + index, value);
+        return true;
     }
-    catch(...)
+    catch (...)
     {
         return false;
     }
-
-    return true;
 }
 
 template <class T>
@@ -82,15 +84,15 @@ bool Vector<T>::Delete(int index)
     {
         return false;
     }
-    m_data.erase(m_data.begin() + index);
 
+    m_data.erase(m_data.begin() + index);
     return true;
 }
 
 template <class T>
 T& Vector<T>::operator[](int index)
 {
-    if(index < 0 || index >= m_data.size())
+    if (index < 0 || index >= m_data.size())
     {
         throw out_of_range("Index out of bounds");
     }
@@ -100,7 +102,7 @@ T& Vector<T>::operator[](int index)
 template <class T>
 const T& Vector<T>::operator[](int index) const
 {
-    if(index < 0 || index >= m_data.size())
+    if (index < 0 || index >= m_data.size())
     {
         throw out_of_range("Index out of bounds");
     }
@@ -111,6 +113,18 @@ template <class T>
 int Vector<T>::GetSize() const
 {
     return m_data.size();
+}
+
+template <class T>
+bool Vector<T>::IsEmpty() const
+{
+    return m_data.empty();
+}
+
+template <class T>
+void Vector<T>::Clear()
+{
+    m_data.clear();
 }
 
 #endif // ENCAPVECT_H_INCLUDED

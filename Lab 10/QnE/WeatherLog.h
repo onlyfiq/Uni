@@ -2,7 +2,6 @@
 #define WEATHERLOG_H_INCLUDED
 
 #include <string>
-//#include "Vector.h"
 #include "EncapVect.h"
 #include "WeatherRec.h"
 

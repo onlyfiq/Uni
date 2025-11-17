@@ -367,11 +367,10 @@ template <class T>
 void Bst<T>::InOrder(void (*func)(const T&)) const
 {
     inOrder(root, func);
-    cout << endl;
 }
 
 template <class T>
-void Bst<T>::inOrder(Node* node,void (*func)(const T&)) const
+void Bst<T>::inOrder(const Node* node,void (*func)(const T&)) const
 {
     if (node)
     {
@@ -385,11 +384,10 @@ template <class T>
 void Bst<T>::PreOrder(void (*func)(const T&)) const
 {
     preOrder(root, func);
-    cout << endl;
 }
 
 template <class T>
-void Bst<T>::preOrder(Node* node,void (*func)(const T&)) const
+void Bst<T>::preOrder(const Node* node,void (*func)(const T&)) const
 {
     if (node)
     {
@@ -403,11 +401,10 @@ template <class T>
 void Bst<T>::PostOrder(void (*func)(const T&)) const
 {
     postOrder(root, func);
-    cout << endl;
 }
 
 template <class T>
-void Bst<T>::postOrder(Node* node,void (*func)(const T&)) const
+void Bst<T>::postOrder(const Node* node,void (*func)(const T&)) const
 {
     if (node)
     {

@@ -40,6 +40,7 @@
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
+		<Unit filename="Map.h" />
 		<Unit filename="Time.cpp" />
 		<Unit filename="Time.h" />
 		<Unit filename="Vector.h" />
