@@ -376,7 +376,7 @@ void Bst<T>::inOrder(Node* node,void (*func)(const T&)) const
     if (node)
     {
         inOrder(node->left, func);
-        cout << node->data << " ";
+        func(node->data);
         inOrder(node->right, func);
     }
 }
@@ -393,7 +393,7 @@ void Bst<T>::preOrder(Node* node,void (*func)(const T&)) const
 {
     if (node)
     {
-        cout << node->data << " ";
+        func(node->data);
         preOrder(node->left, func);
         preOrder(node->right, func);
     }
@@ -413,7 +413,7 @@ void Bst<T>::postOrder(Node* node,void (*func)(const T&)) const
     {
         postOrder(node->left, func);
         postOrder(node->right, func);
-        cout << node->data << " ";
+        func(node->data);
     }
 }
 
