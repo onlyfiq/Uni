@@ -103,6 +103,11 @@ public:
      */
     void SetAmbAirTemp(float ambAirTemp);
 
+    /**
+     * @brief Generates a DateTimeKey for BST insertion.
+     */
+    DateTimeKey GetDateTimeKey() const;
+
 private:
     Date m_date;       /**< Date of the record */
     Time m_time;       /**< Time of the record */

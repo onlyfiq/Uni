@@ -85,6 +85,11 @@ void WeatherRec::SetAmbAirTemp(float ambAirTemp)
     m_airTemp = ambAirTemp;
 }
 
+DateTimeKey WeatherRec::GetDateTimeKey() const
+{
+    return DateTimeKey(m_date, m_time);
+}
+
 // Output operator: prints the weather record neatly
 ostream& operator<<(ostream& os, const WeatherRec& wr)
 {
