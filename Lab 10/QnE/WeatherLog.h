@@ -71,9 +71,11 @@ public:
      * CSV file columns: Month, AvgSpeed, SDSpeed, AvgTemp, TotalSolarRad
      */
     void PrintToCsv(int year);
+    void DisplaySPCC(int month);
+    void DisplaySpeedTempSolarRadWithMAD(int year);
 
 private:
-       Map<int, Map<int, Bst<RecNode>>> m_data;
+    Map<int, Map<int, Bst<RecNode>>> m_data;
 };
 
 #endif // WEATHERLOG_H_INCLUDED

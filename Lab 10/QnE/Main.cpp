@@ -26,8 +26,8 @@ int main()
         cout << "\n Weather Data Menu \n";
         cout << "1. Display average wind speed and SD for a month/year\n";
         cout << "2. Display average ambient air temperature and SD for each month of a year\n";
-        cout << "3. Display total solar radiation for each month of a year\n";
-        cout << "4. Display combined averages and totals for each month of a year\n";
+        cout << "3. Display sample Pearson Correlation Coefficient (sPCC) for a month\n";
+        cout << "4. Display average wind speed(km/h), average ambient air temperature and total solar radiation in kWh/m2 for each month of a specified year\n";
         cout << "0. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
@@ -57,10 +57,10 @@ int main()
         case 3:
         {
             // Option 3: Total solar radiation
-            int year;
-            cout << "Enter year: ";
-            cin >> year;
-            log.DisplayTotalSolarRad(year);
+            int month;
+            cout << "Enter month: ";
+            cin >> month;
+            log.DisplaySPCC(month);
             break;
         }
         case 4:
@@ -69,7 +69,7 @@ int main()
             int year;
             cout << "Enter year: ";
             cin >> year;
-            log.DisplaySpeedTempSolarRad(year);
+            log.DisplaySpeedTempSolarRadWithMAD(year);
             break;
         }
         case 0:
