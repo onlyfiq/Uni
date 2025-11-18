@@ -22,7 +22,9 @@ WeatherLog::WeatherLog() {}
 bool IsValidNumber(const string& s)
 {
     if (s.empty())
+    {
         return false;
+    }
 
     // handle invalid words like NA, N/A, --- etc.
     string lower;
@@ -30,12 +32,16 @@ bool IsValidNumber(const string& s)
     {
         char c = s[i];
         if (c >= 'A' && c <= 'Z')
+        {
             c = c - 'A' + 'a';
+        }
         lower += c;
     }
 
     if (lower == "na" || lower == "n/a" || lower == "---" || lower == "-9999")
+    {
         return false;
+    }
 
     bool hasDigit = false;
     bool hasDot = false;
@@ -51,20 +57,26 @@ bool IsValidNumber(const string& s)
         else if (c == '.')
         {
             if (hasDot || hasE)
+            {
                 return false;
+            }
             hasDot = true;
         }
         else if (c == 'e' || c == 'E')
         {
             if (hasE || !hasDigit || i + 1 == s.size())
+            {
                 return false;
+            }
             hasE = true;
             hasDigit = false;
         }
         else if (c == '+' || c == '-')
         {
             if (i > 0 && s[i - 1] != 'e' && s[i - 1] != 'E')
+            {
                 return false;
+            }
         }
         else
         {
@@ -73,6 +85,20 @@ bool IsValidNumber(const string& s)
     }
 
     return hasDigit;
+}
+
+// Recursive middle insertion to build balanced BST
+void InsertMiddle(Bst<RecNode>& bst, Vector<RecNode>& nodes, int start, int end)
+{
+    if (start > end)
+    {
+        return;
+    }
+
+    int mid = (start + end) / 2;
+    bst.Insert(nodes[mid]);
+    InsertMiddle(bst, nodes, start, mid - 1);
+    InsertMiddle(bst, nodes, mid + 1, end);
 }
 
 // Load CSV data into weatherData
@@ -144,6 +170,7 @@ bool WeatherLog::LoadData(const string& dataSourceFile)
             continue;
         }
 
+        Map<int, Map<int, Vector<RecNode>>> tempData;
 
         // Read data rows
         string line;
@@ -188,8 +215,19 @@ bool WeatherLog::LoadData(const string& dataSourceFile)
 
                 Date d(day, month, year);
                 Time t(hour, minute);
-                WeatherRec rec(d, t, wind, solar, temp);
-                weatherData.Insert(weatherData.GetSize(), rec);
+                WeatherRec w(d, t, wind, solar, temp);
+                RecNode recNode(w);
+
+                if(!tempData.Contains(year))
+                {
+                    tempData[year] = Map<int, Vector<RecNode>>();
+                }
+                if(!tempData[year].Contains(month))
+                {
+                    tempData[year][month] = Vector<RecNode>();
+                }
+
+                tempData[year][month].Insert(tempData[year][month].GetSize(), recNode);
                 totalRecords++;
             }
 
@@ -202,6 +240,31 @@ bool WeatherLog::LoadData(const string& dataSourceFile)
             {
                 cout << "Skipping out-of-range numeric value: " << line
                      << " (" << e.what() << ")" << endl;
+            }
+        }
+
+        Vector<int> yearKeys;
+        tempData.GetKeys(yearKeys);
+        for (int y = 0; y < yearKeys.GetSize(); y++)
+        {
+            int yearKey = yearKeys[y];
+            if (!m_data.Contains(yearKey))
+                m_data[yearKey] = Map<int, Bst<RecNode>>();
+
+            Map<int, Vector<RecNode>>& months = tempData[yearKey];
+
+            Vector<int> monthKeys;
+            months.GetKeys(monthKeys);
+
+            for (int m = 0; m < monthKeys.GetSize(); m++)
+            {
+                int monthKey = monthKeys[m];
+                Vector<RecNode>& nodes = months[monthKey];
+
+                if (!m_data[yearKey].Contains(monthKey))
+                    m_data[yearKey][monthKey] = Bst<RecNode>();
+
+                InsertMiddle(m_data[yearKey][monthKey], nodes, 0, nodes.GetSize() - 1);
             }
         }
         csvFile.close();

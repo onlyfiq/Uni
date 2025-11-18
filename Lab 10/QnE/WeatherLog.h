@@ -2,8 +2,14 @@
 #define WEATHERLOG_H_INCLUDED
 
 #include <string>
+#include "Map.h"
+#include "BST.h"
+#include "Date.h"
+#include "Time.h"
 #include "EncapVect.h"
+#include "DateTimeKey.h"
 #include "WeatherRec.h"
+#include "RecNode.h"
 
 using std::string;
 
@@ -67,7 +73,7 @@ public:
     void PrintToCsv(int year);
 
 private:
-    Vector<WeatherRec> weatherData; /**< Container storing all weather records */
+       Map<int, Map<int, Bst<RecNode>>> m_data;
 };
 
 #endif // WEATHERLOG_H_INCLUDED

@@ -44,6 +44,7 @@
 			<Option link="0" />
 		</Unit>
 		<Unit filename="Map.h" />
+		<Unit filename="RecNode.h" />
 		<Unit filename="Time.cpp" />
 		<Unit filename="Time.h" />
 		<Unit filename="Vector.h" />

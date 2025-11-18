@@ -22,7 +22,7 @@ public:
     int GetSize() const;
     bool IsEmpty() const;
     void Clear();
-
+    void PushBack(const T& value);
     T& operator[](int index);
     const T& operator[](int index) const;
 
@@ -56,6 +56,12 @@ bool Vector<T>::Add(const T& value)
     {
         return false;
     }
+}
+
+template <class T>
+void Vector<T>::PushBack(const T& value)
+{
+    m_data.push_back(value);
 }
 
 template <class T>

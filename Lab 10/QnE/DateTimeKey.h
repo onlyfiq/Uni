@@ -20,14 +20,20 @@
  */
 struct DateTimeKey
 {
+public:
     int year;
     int month;
     int day;
     int hour;
     int minute;
 
+
     DateTimeKey() :
-        year(0), month(0), day(0), hour(0), minute(0)
+        year(0),
+        month(0),
+        day(0),
+        hour(0),
+        minute(0)
     {
     }
 
@@ -35,14 +41,11 @@ struct DateTimeKey
         year(d.GetYear()),
         month(d.GetMonth()),
         day(d.GetDay()),
-        hour(t.GetHour()),
-        minute(t.GetMinute())
+        hour(t.GetHours()),
+        minute(t.GetMinutes())
     {
     }
 
-    /**
-     * @brief Comparison operator for BST ordering
-     */
     bool operator<(const DateTimeKey &other) const
     {
         if (year != other.year)
@@ -64,9 +67,11 @@ struct DateTimeKey
         return minute < other.minute;
     }
 
-    /**
-     * @brief Equality operator (optional, but useful)
-     */
+    bool operator>(const DateTimeKey &other) const
+    {
+        return other < *this;
+    }
+
     bool operator==(const DateTimeKey &other) const
     {
         return year == other.year &&

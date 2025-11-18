@@ -147,21 +147,21 @@ private:
      * @param node Current subtree root.
      * @param func Function applied to each node value.
      */
-    void inOrder(Node* node, void (*func)(const T&)) const;
+    void inOrder(const Node* node, void (*func)(const T&)) const;
 
     /**
      * @brief Recursive pre-order traversal helper.
      * @param node Current subtree root.
      * @param func Function applied to each node value.
      */
-    void preOrder(Node* node, void (*func)(const T&)) const;
+    void preOrder(const Node* node, void (*func)(const T&)) const;
 
     /**
      * @brief Recursive post-order traversal helper.
      * @param node Current subtree root.
      * @param func Function applied to each node value.
      */
-    void postOrder(Node* node, void (*func)(const T&)) const;
+    void postOrder(const Node* node, void (*func)(const T&)) const;
 
     /**
      * @brief Recursive destroy helper.
