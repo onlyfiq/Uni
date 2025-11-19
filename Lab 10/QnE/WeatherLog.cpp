@@ -101,6 +101,18 @@ void InsertMiddle(Bst<RecNode>& bst, Vector<RecNode>& nodes, int start, int end)
     InsertMiddle(bst, nodes, mid + 1, end);
 }
 
+// Global traversal buffer
+static Vector<RecNode>* g_traverseBuffer = nullptr;
+
+// Function pointer callback to collect nodes
+static void CollectRecNode(const RecNode& node)
+{
+    if (g_traverseBuffer != nullptr)
+    {
+        g_traverseBuffer->Insert(g_traverseBuffer->GetSize(), node);
+    }
+}
+
 // Load CSV data into weatherData
 bool WeatherLog::LoadData(const string& dataSourceFile)
 {
@@ -284,39 +296,50 @@ void WeatherLog::DisplayAvgSpeed(int month, int year)
         return;
     }
 
-    const Bst<RecNode>& bst = m_data[year][month];
 
-    Vector<float> speeds;
-    bst.InOrder([&speeds](const RecNode& node)
-    {
-        speeds.Insert(speeds.GetSize(), node.GetRec().GetSpeed());
-    });
+    Vector<RecNode> nodes;
+    g_traverseBuffer = &nodes;
+    m_data[year][month].InOrder(CollectRecNode);
+    g_traverseBuffer = nullptr;
 
-    if(speeds.GetSize() == 0)
+
+
+    if (nodes.GetSize() == 0)
     {
         cout << "No data for " << month << "/" << year << endl;
         return;
     }
 
-    float sum = 0.0f;
-    for(int i = 0; i < speeds.GetSize(); i++)
+
+    Vector<float> speeds;
+    for (int i = 0; i < nodes.GetSize(); i++)
+    {
+        speeds.Insert(speeds.GetSize(), nodes[i].rec.GetSpeed());
+    }
+
+
+    float sum = 0;
+    for (int i = 0; i < speeds.GetSize(); i++)
     {
         sum += speeds[i];
     }
 
+
     float avg = sum / speeds.GetSize();
 
-    float sumSq = 0.0f;
-    for(int i = 0; i < speeds.GetSize(); i++)
+
+    float sumSq = 0;
+    for (int i = 0; i < speeds.GetSize(); i++)
     {
         sumSq += (speeds[i] - avg) * (speeds[i] - avg);
     }
 
-    float sd = (speeds.GetSize() > 1) ? sqrt(sumSq / (speeds.GetSize() - 1)) : 0.0f;
+
+    float sd = (speeds.GetSize() > 1) ? sqrt(sumSq / (speeds.GetSize() - 1)) : 0;
+
 
     cout << "Month: " << month << " Year: " << year
-         << " | Avg Speed: " << avg << " km/h"
-         << " | SD: " << sd << endl;
+         << " | Avg Speed: " << avg << " | SD: " << sd << endl;
 }
 
 // 2. Average temperature and SD for each month of a year
@@ -336,13 +359,18 @@ void WeatherLog::DisplayAvgTempSD(int year)
     for(int m = 0; m < monthKeys.GetSize(); m++)
     {
         int month = monthKeys[m];
-        const Bst<RecNode>& bst = months[month];
+
+        Vector<RecNode> nodes;
+        g_traverseBuffer = &nodes;
+        Bst<RecNode>& bst = months[month];
+        bst.InOrder(CollectRecNode);
+        g_traverseBuffer = nullptr;
 
         Vector<float> temps;
-        bst.InOrder([&temps](const RecNode& node)
+        for (int i = 0; i < nodes.GetSize(); i++)
         {
-            temps.Insert(temps.GetSize(), node.GetRec().GetAmbAirTemp());
-        });
+            temps.Insert(temps.GetSize(), nodes[i].rec.GetAmbAirTemp());
+        }
 
         if(temps.GetSize() == 0)
         {
@@ -500,7 +528,9 @@ void WeatherLog::DisplaySPCC(int month)
 
         Bst<RecNode>& bst = months[month];
         Vector<RecNode> nodes;
-        bst.InOrder(nodes);
+        g_traverseBuffer = &nodes;
+        bst.InOrder(CollectRecNode);
+        g_traverseBuffer = nullptr;
 
         for(int i = 0; i < nodes.GetSize(); i++)
         {
@@ -555,7 +585,9 @@ void WeatherLog::DisplaySpeedTempSolarRadWithMAD(int year)
 
         Bst<RecNode>& bst = months[month];
         Vector<RecNode> nodes;
-        bst.InOrder(nodes); // collect all records in order
+        g_traverseBuffer = &nodes;
+        bst.InOrder(CollectRecNode);
+        g_traverseBuffer = nullptr;
 
         Vector<float> speeds, temps, solar;
         for(int i = 0; i < nodes.GetSize(); i++)
