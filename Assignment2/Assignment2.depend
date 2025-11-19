@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1763575027 source:e:\uni\ict283 3.0\a2\assignment2\date.cpp
+	"Date.h"
+	<stdexcept>
+
+1763575027 e:\uni\ict283 3.0\a2\assignment2\date.h
+	<iostream>
+	<string>
+
+1763575027 source:e:\uni\ict283 3.0\a2\assignment2\time.cpp
+	"Time.h"
+	<iomanip>
+
+1763575027 e:\uni\ict283 3.0\a2\assignment2\time.h
+	<iostream>
+
+1763575027 source:e:\uni\ict283 3.0\a2\assignment2\weatherlog.cpp
+	"WeatherLog.h"
+	<iostream>
+	<fstream>
+	<cmath>
+	<string>
+	<sstream>
+	<stdexcept>
+
+1763575027 e:\uni\ict283 3.0\a2\assignment2\weatherlog.h
+	<string>
+	"Map.h"
+	"BST.h"
+	"Date.h"
+	"Time.h"
+	"EncapVect.h"
+	"DateTimeKey.h"
+	"WeatherRec.h"
+	"RecNode.h"
+
+1763575027 e:\uni\ict283 3.0\a2\assignment2\map.h
+	<map>
+	<stdexcept>
+	"EncapVect.h"
+
+1763575027 e:\uni\ict283 3.0\a2\assignment2\encapvect.h
+	<iostream>
+	<stdexcept>
+	<vector>
+
+1763575027 e:\uni\ict283 3.0\a2\assignment2\bst.h
+	<iostream>
+
+1763575027 e:\uni\ict283 3.0\a2\assignment2\datetimekey.h
+	"Date.h"
+	"Time.h"
+
+1763575027 e:\uni\ict283 3.0\a2\assignment2\weatherrec.h
+	"Date.h"
+	"Time.h"
+	"DateTimeKey.h"
+	<iostream>
+
+1763575027 e:\uni\ict283 3.0\a2\assignment2\recnode.h
+	"WeatherRec.h"
+	"DateTimeKey.h"
+
+1763575027 source:e:\uni\ict283 3.0\a2\assignment2\weatherrec.cpp
+	"WeatherRec.h"
+	<iomanip>
+
