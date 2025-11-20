@@ -35,7 +35,7 @@ public:
      * @param filePath Path to the data source file.
      * @return True if data was successfully loaded, false otherwise.
      */
-    bool LoadData(const string& filePath);
+    bool LoadData();
 
     /**
      * @brief Displays average wind speed and standard deviation for a specific month and year.

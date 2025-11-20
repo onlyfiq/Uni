@@ -42,6 +42,10 @@
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
+		<Unit filename="Menu.cpp" />
+		<Unit filename="Menu.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="RecNode.h" />
 		<Unit filename="Time.cpp" />
 		<Unit filename="Time.h" />

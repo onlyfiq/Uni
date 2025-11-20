@@ -114,8 +114,11 @@ static void CollectRecNode(const RecNode& node)
 }
 
 // Load CSV data into weatherData
-bool WeatherLog::LoadData(const string& dataSourceFile)
+bool WeatherLog::LoadData()
 {
+    // Load the data source
+    string dataSourceFile = "data/data_source.txt";
+
     // Read the CSV file name from data_source.txt
     ifstream sourceFile(dataSourceFile);
     if(!sourceFile.is_open())
