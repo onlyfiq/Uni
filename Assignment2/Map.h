@@ -21,10 +21,6 @@ public:
     V& operator[](const K& key);       // main access method
     const V& At(const K& key) const;   // throws if missing
 
-    K KeyAt(int index) const;          // get key by sorted index
-    V& ValueAt(int index);             // get value by sorted index
-    const V& ValueAt(int index) const;
-
     void GetKeys(Vector<K>& out) const;
 
 private:
@@ -67,54 +63,6 @@ const V& Map<K, V>::At(const K& key) const
     if (it == m_data.end())
     {
         throw runtime_error("Key not found");
-    }
-    return it->second;
-}
-
-template <class K, class V>
-K Map<K, V>::KeyAt(int index) const
-{
-    if (index < 0 || index >= Size())
-    {
-        throw runtime_error("Index out of bounds");
-    }
-
-    typename map<K, V>::const_iterator it = m_data.begin();
-    for (int i = 0; i < index; i++)
-    {
-        ++it;
-    }
-    return it->first;
-}
-
-template <class K, class V>
-V& Map<K, V>::ValueAt(int index)
-{
-    if (index < 0 || index >= Size())
-    {
-        throw runtime_error("Index out of bounds");
-    }
-
-    typename map<K, V>::iterator it = m_data.begin();
-    for (int i = 0; i < index; i++)
-    {
-        ++it;
-    }
-    return it->second;
-}
-
-template <class K, class V>
-const V& Map<K, V>::ValueAt(int index) const
-{
-    if (index < 0 || index >= Size())
-    {
-        throw runtime_error("Index out of bounds");
-    }
-
-    typename map<K, V>::const_iterator it = m_data.begin();
-    for (int i = 0; i < index; i++)
-    {
-        ++it;
     }
     return it->second;
 }
