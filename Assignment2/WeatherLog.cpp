@@ -207,7 +207,7 @@ bool WeatherLog::LoadData(const string& dataSourceFile)
             int day, month, year, hour, minute;
             if(sscanf(wast.c_str(), "%d/%d/%d %d:%d", &day, &month, &year, &hour, &minute) != 5)
             {
-                cout << "Skipping invalid WAST: " << wast << endl;
+//                cout << "Skipping invalid WAST: " << wast << endl;
                 continue;
             }
 
@@ -215,7 +215,7 @@ bool WeatherLog::LoadData(const string& dataSourceFile)
                     !IsValidNumber(row[idxTemp]) ||
                     !IsValidNumber(row[idxSolar]))
             {
-                cout << "Skipping invalid numeric row: " << line << endl;
+//                cout << "Skipping invalid numeric row: " << line << endl;
                 continue;
             }
 
@@ -224,6 +224,9 @@ bool WeatherLog::LoadData(const string& dataSourceFile)
                 float wind = stof(row[idxWind]);
                 float temp = stof(row[idxTemp]);
                 float solar = stof(row[idxSolar]);
+
+                wind = wind * 3.6f;
+                solar = solar * 0.0001667f;
 
                 Date d(day, month, year);
                 Time t(hour, minute);
@@ -296,13 +299,10 @@ void WeatherLog::DisplayAvgSpeed(int month, int year)
         return;
     }
 
-
     Vector<RecNode> nodes;
     g_traverseBuffer = &nodes;
     m_data[year][month].InOrder(CollectRecNode);
     g_traverseBuffer = nullptr;
-
-
 
     if (nodes.GetSize() == 0)
     {
@@ -310,13 +310,11 @@ void WeatherLog::DisplayAvgSpeed(int month, int year)
         return;
     }
 
-
     Vector<float> speeds;
     for (int i = 0; i < nodes.GetSize(); i++)
     {
         speeds.Insert(speeds.GetSize(), nodes[i].rec.GetSpeed());
     }
-
 
     float sum = 0;
     for (int i = 0; i < speeds.GetSize(); i++)
@@ -324,16 +322,13 @@ void WeatherLog::DisplayAvgSpeed(int month, int year)
         sum += speeds[i];
     }
 
-
     float avg = sum / speeds.GetSize();
-
 
     float sumSq = 0;
     for (int i = 0; i < speeds.GetSize(); i++)
     {
         sumSq += (speeds[i] - avg) * (speeds[i] - avg);
     }
-
 
     float sd = (speeds.GetSize() > 1) ? sqrt(sumSq / (speeds.GetSize() - 1)) : 0;
 
@@ -398,79 +393,6 @@ void WeatherLog::DisplayAvgTempSD(int year)
              << " | SD: " << sd << endl;
     }
 }
-
-//// 3. Total solar radiation per month for a year
-//void WeatherLog::DisplayTotalSolarRad(int year)
-//{
-//    for (int month = 1; month <= 12; month++)
-//    {
-//        float total = 0.0f;
-//
-//        for (int i = 0; i < weatherData.GetSize(); i++)
-//        {
-//            WeatherRec& rec = weatherData[i];
-//            if (rec.GetMonth() == month && rec.GetYear() == year)
-//            {
-//                total += rec.GetSolarRad() * 0.0001667f;
-//            }
-//        }
-//
-//        if (total > 0)
-//        {
-//            cout << "Month: " << month << " | Total Solar Radiation: " << total << " kWh/m2" << endl;
-//        }
-//    }
-//}
-
-//// 4. Combined averages and totals per month
-//void WeatherLog::DisplaySpeedTempSolarRad(int year)
-//{
-//    for (int month = 1; month <= 12; month++)
-//    {
-//        float sumSpeed = 0, sumTemp = 0, totalRad = 0;
-//        int count = 0;
-//
-//        for (int i = 0; i < weatherData.GetSize(); i++)
-//        {
-//            WeatherRec& rec = weatherData[i];
-//            if (rec.GetMonth() == month && rec.GetYear() == year)
-//            {
-//                sumSpeed += rec.GetSpeed();
-//                sumTemp += rec.GetAmbAirTemp();
-//                totalRad += rec.GetSolarRad() * 0.0001667f;
-//                count++;
-//            }
-//        }
-//
-//        if (count == 0)
-//        {
-//            continue;
-//        }
-//
-//        float avgSpeed = sumSpeed / count;
-//        float avgTemp = sumTemp / count;
-//
-//        float sumSq = 0.0f;
-//        for (int i = 0; i < weatherData.GetSize(); i++)
-//        {
-//            WeatherRec& rec = weatherData[i];
-//            if (rec.GetMonth() == month && rec.GetYear() == year)
-//            {
-//                sumSq += (rec.GetSpeed() - avgSpeed) * (rec.GetSpeed() - avgSpeed);
-//            }
-//        }
-//
-//        float sdSpeed = (count > 1) ? sqrt(sumSq / (count - 1)) : 0.0f;
-//
-//        cout << "Month: " << month
-//             << " | Avg Speed: " << avgSpeed << " (SD:" << sdSpeed << ") km/h"
-//             << " | Avg Temp: " << avgTemp << " C"
-//             << " | Total Solar Rad: " << totalRad << " kWh/m2" << endl;
-//    }
-//
-//    // Automatically export results to CSV
-//    PrintToCsv(year);
-//}
 
 float sPCC(const Vector<float>& X, const Vector<float>& Y)
 {
@@ -636,7 +558,6 @@ void WeatherLog::DisplaySpeedTempSolarRadWithMAD(int year)
              << avgTemp << "(" << sdTemp << "," << madTemp << "),"
              << totalSolar << "\n";
 
-        // Optional: also print to console
         cout << "Month " << month
              << " | Avg Speed: " << avgSpeed << " (SD:" << sdSpeed << ", MAD:" << madSpeed << ")"
              << " | Avg Temp: " << avgTemp << " (SD:" << sdTemp << ", MAD:" << madTemp << ")"
