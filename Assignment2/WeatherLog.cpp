@@ -267,7 +267,9 @@ bool WeatherLog::LoadData()
         {
             int yearKey = yearKeys[y];
             if(!m_data.Contains(yearKey))
+            {
                 m_data[yearKey] = Map<int, Bst<RecNode>>();
+            }
 
             Map<int, Vector<RecNode>>& months = tempData[yearKey];
 
@@ -280,7 +282,9 @@ bool WeatherLog::LoadData()
                 Vector<RecNode>& nodes = months[monthKey];
 
                 if(!m_data[yearKey].Contains(monthKey))
+                {
                     m_data[yearKey][monthKey] = Bst<RecNode>();
+                }
 
                 InsertMiddle(m_data[yearKey][monthKey], nodes, 0, nodes.GetSize() - 1);
             }
