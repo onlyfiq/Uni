@@ -32,11 +32,19 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="Bst.h" />
+		<Unit filename="BstTest.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="Date.cpp" />
 		<Unit filename="Date.h" />
 		<Unit filename="DateTimeKey.h" />
+		<Unit filename="DateTimeKeyTest.cpp" />
 		<Unit filename="EncapVect.h" />
-		<Unit filename="Main.cpp" />
+		<Unit filename="Main.cpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="Map.h" />
 		<Unit filename="MapTest.cpp">
 			<Option compile="0" />
