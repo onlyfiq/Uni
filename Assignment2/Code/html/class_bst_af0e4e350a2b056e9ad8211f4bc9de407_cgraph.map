@@ -1,0 +1,9 @@
+<map id="Bst::operator=" name="Bst::operator=">
+<area shape="rect" id="Node000001" title="Copy assignment operator." alt="" coords="5,67,111,92"/>
+<area shape="rect" id="Node000002" href="$class_bst.html#a96a42fa1b26624c234b38366f9ec4535" title="Recursively clones a subtree." alt="" coords="163,29,265,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,64,149,55,150,60,111,69"/>
+<area shape="rect" id="Node000003" href="$class_bst.html#a54941036770bbc28a2d63a861d30878c" title="Recursive destroy helper." alt="" coords="159,103,269,128"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="111,89,146,97,145,102,110,94"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="188,31,182,21,185,11,196,5,214,3,235,6,244,15,241,19,233,11,214,8,198,10,190,15,188,20,192,28"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="188,104,182,94,185,85,196,78,214,76,235,79,244,88,241,92,233,84,214,81,198,83,190,88,188,94,192,101"/>
+</map>

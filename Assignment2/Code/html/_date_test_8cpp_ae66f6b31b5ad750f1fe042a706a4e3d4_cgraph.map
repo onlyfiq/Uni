@@ -1,0 +1,23 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,205,56,231"/>
+<area shape="rect" id="Node000002" href="$class_date.html#ab1ad19969fa570605a6b0cd32b0da822" title="Constructs a Date with specified values." alt="" coords="139,5,223,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="32,205,38,174,52,132,72,88,102,48,125,32,128,36,106,52,77,90,57,134,44,175,37,206"/>
+<area shape="rect" id="Node000003" href="$class_date.html#ad62ff590543681469652347d01139092" title="Sets the date to the specified values." alt="" coords="307,56,411,81"/>
+<area shape="poly" id="edge11_Node000001_Node000003" title=" " alt="" coords="33,204,55,148,75,117,103,92,149,70,199,59,248,56,293,57,293,62,248,61,199,64,150,75,105,96,79,121,59,151,38,206"/>
+<area shape="rect" id="Node000004" href="$class_date.html#a6304a67f1c13b239eb8e80ad68161e40" title="Returns the day of the month." alt="" coords="131,107,232,132"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="39,203,65,172,103,141,117,134,119,138,105,146,69,176,43,207"/>
+<area shape="rect" id="Node000005" href="$class_date.html#af2dcc6ce51dbb2bd798499a149bdffb7" title="Returns the month number." alt="" coords="124,156,239,181"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="56,207,103,190,125,183,127,188,105,195,57,212"/>
+<area shape="rect" id="Node000006" href="$class_date.html#ac49c70892761976e5e070070c0715ad1" title="Returns the full month name." alt="" coords="104,205,259,231"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="56,215,90,215,90,221,56,221"/>
+<area shape="rect" id="Node000007" href="$class_date.html#ad79ce504482f317ddcfdc4ecad77671f" title="Returns the year." alt="" coords="129,255,234,280"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="57,224,130,248,128,253,56,229"/>
+<area shape="rect" id="Node000008" href="$class_date.html#a56469dbfb6a0c32326330796cb316881" title="Compares two dates chronologically." alt="" coords="125,304,237,329"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="43,229,69,259,105,289,119,297,117,301,103,294,66,263,39,232"/>
+<area shape="rect" id="Node000009" href="$class_date.html#a3b103cc8257d3055aedb519fff343503" title="Checks if two dates are identical." alt="" coords="121,353,241,379"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="39,230,62,282,81,313,106,339,115,345,112,349,102,343,77,316,57,285,34,232"/>
+<area shape="rect" id="Node000010" href="$_date_8cpp.html#a1066557b9356efa7794a19cea936e688" title="Extracts a Date from an input stream." alt="" coords="139,403,224,428"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="36,230,43,262,55,305,76,349,106,388,127,401,124,406,102,392,71,352,50,306,37,263,31,231"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="224,27,301,50,300,55,223,32"/>
+<area shape="poly" id="edge10_Node000010_Node000003" title=" " alt="" coords="223,407,241,399,257,388,284,354,306,316,323,275,335,233,350,155,354,95,360,95,355,155,340,235,328,277,311,318,289,357,261,392,244,404,225,412"/>
+</map>

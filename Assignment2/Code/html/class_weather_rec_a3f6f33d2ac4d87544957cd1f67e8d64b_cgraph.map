@@ -1,0 +1,15 @@
+<map id="WeatherRec::GetDateTimeKey" name="WeatherRec::GetDateTimeKey">
+<area shape="rect" id="Node000001" title="Generates a sortable key combining date and time." alt="" coords="5,104,207,129"/>
+<area shape="rect" id="Node000002" href="$struct_date_time_key.html#a8106da99ba2183d7cb43c9a9e90dcd6d" title="Constructs a key directly from a Date and Time object." alt="" coords="255,104,441,129"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,114,241,114,241,119,207,119"/>
+<area shape="rect" id="Node000003" href="$class_date.html#a6304a67f1c13b239eb8e80ad68161e40" title="Returns the day of the month." alt="" coords="501,5,603,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="370,102,488,40,502,33,504,38,490,44,372,106"/>
+<area shape="rect" id="Node000004" href="$class_time.html#a508c3a20933ad90eb9ba0339c51d949d" title="Retrieves the hour component of the time." alt="" coords="495,55,609,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="401,101,485,81,486,86,402,107"/>
+<area shape="rect" id="Node000005" href="$class_time.html#a776335efdef4b465085442f046699b38" title="Retrieves the minute component of the time." alt="" coords="489,104,615,129"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="442,114,476,114,476,119,442,119"/>
+<area shape="rect" id="Node000006" href="$class_date.html#af2dcc6ce51dbb2bd798499a149bdffb7" title="Returns the month number." alt="" coords="495,153,609,179"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="402,127,486,147,485,153,401,132"/>
+<area shape="rect" id="Node000007" href="$class_date.html#ad79ce504482f317ddcfdc4ecad77671f" title="Returns the year." alt="" coords="499,203,605,228"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="374,127,490,188,506,195,504,200,488,192,371,132"/>
+</map>

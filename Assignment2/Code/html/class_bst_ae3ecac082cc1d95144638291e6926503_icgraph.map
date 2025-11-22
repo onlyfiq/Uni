@@ -1,0 +1,7 @@
+<map id="Bst::DeleteTree" name="Bst::DeleteTree">
+<area shape="rect" id="Node000001" title="Removes all nodes in the tree and resets it to empty." alt="" coords="261,5,373,31"/>
+<area shape="rect" id="Node000002" href="$_bst_test_8cpp.html#a06489e9ff2a7a1bc724379496c918f0b" title=" " alt="" coords="104,5,213,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="247,21,213,21,213,15,247,15"/>
+<area shape="rect" id="Node000003" href="$_bst_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="90,21,56,21,56,15,90,15"/>
+</map>

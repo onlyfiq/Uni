@@ -1,0 +1,7 @@
+<map id="operator&lt;&lt;" name="operator&lt;&lt;">
+<area shape="rect" id="Node000001" title="Outputs a Time object to a stream." alt="" coords="5,31,91,56"/>
+<area shape="rect" id="Node000002" href="$class_time.html#a508c3a20933ad90eb9ba0339c51d949d" title="Retrieves the hour component of the time." alt="" coords="145,5,258,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,34,131,27,131,32,91,39"/>
+<area shape="rect" id="Node000003" href="$class_time.html#a776335efdef4b465085442f046699b38" title="Retrieves the minute component of the time." alt="" coords="139,55,264,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="91,47,125,53,125,58,90,53"/>
+</map>

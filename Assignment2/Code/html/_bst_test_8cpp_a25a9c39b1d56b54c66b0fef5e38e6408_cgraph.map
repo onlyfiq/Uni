@@ -1,0 +1,28 @@
+<map id="TestAssignmentOperator" name="TestAssignmentOperator">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,115,172,140"/>
+<area shape="rect" id="Node000002" href="$_bst_test_8cpp.html#a367f1fd57e35848c1846ae9068995eff" title=" " alt="" coords="249,16,309,41"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,112,219,50,235,43,237,48,221,55,112,117"/>
+<area shape="rect" id="Node000003" href="$class_bst.html#a5f347ed1e8bbae3e46a53b0e26917277" title="Deletes a node containing the specified value." alt="" coords="220,65,337,91"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="138,112,215,92,216,97,139,117"/>
+<area shape="rect" id="Node000005" href="$class_bst.html#a0ea4c71d9f2dc2ea0dbfb367b0da3550" title="Inserts a value into the BST." alt="" coords="237,115,320,140"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="172,125,223,125,223,130,172,130"/>
+<area shape="rect" id="Node000007" href="$class_bst.html#af0e4e350a2b056e9ad8211f4bc9de407" title="Copy assignment operator." alt="" coords="226,176,331,201"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="130,138,226,169,225,174,128,143"/>
+<area shape="rect" id="Node000010" href="$class_bst.html#a837929f7e97137b80480638f2637b226" title="Searches for a value in the BST." alt="" coords="233,273,324,299"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="107,138,253,262,250,266,104,142"/>
+<area shape="rect" id="Node000004" href="$class_bst.html#a878d2405dd7b21a5a3a426912f26c4ff" title="Recursive delete&#45;node helper." alt="" coords="385,29,500,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="336,63,371,55,373,60,337,68"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="415,31,410,21,413,11,424,5,443,3,465,6,475,15,471,19,463,11,443,8,426,10,417,15,415,20,420,28"/>
+<area shape="rect" id="Node000006" href="$class_bst.html#a6c06c5bb9247d84a71787128a7cc81bd" title="Recursive insert helper." alt="" coords="401,103,484,128"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="320,122,387,117,387,122,320,127"/>
+<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="415,104,410,94,413,85,424,78,443,76,465,79,475,88,471,92,463,84,443,81,426,83,417,88,415,94,420,101"/>
+<area shape="rect" id="Node000008" href="$class_bst.html#a96a42fa1b26624c234b38366f9ec4535" title="Recursively clones a subtree." alt="" coords="391,176,494,201"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="331,186,377,186,377,191,331,191"/>
+<area shape="rect" id="Node000009" href="$class_bst.html#a54941036770bbc28a2d63a861d30878c" title="Recursive destroy helper." alt="" coords="387,249,498,275"/>
+<area shape="poly" id="edge11_Node000007_Node000009" title=" " alt="" coords="309,199,402,241,400,246,307,204"/>
+<area shape="poly" id="edge10_Node000008_Node000008" title=" " alt="" coords="415,177,410,168,413,158,424,152,443,149,465,153,475,161,471,165,463,158,443,155,426,157,417,161,415,167,420,174"/>
+<area shape="poly" id="edge12_Node000009_Node000009" title=" " alt="" coords="415,251,410,241,413,231,424,225,443,223,465,226,475,235,471,239,463,231,443,228,426,230,417,235,415,240,420,248"/>
+<area shape="rect" id="Node000011" href="$class_bst.html#af6d0fea4b986fd2bb6a6568a40a3fcb1" title="Recursive search helper." alt="" coords="398,323,487,348"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="322,296,387,316,386,321,321,301"/>
+<area shape="poly" id="edge15_Node000011_Node000011" title=" " alt="" coords="415,324,410,314,413,305,424,298,443,296,465,299,475,308,471,312,463,304,443,301,426,303,417,308,415,314,420,321"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="MeanAbsoluteDeviation" name="MeanAbsoluteDeviation">
+<area shape="rect" id="Node000001" title=" " alt="" coords="465,13,623,38"/>
+<area shape="rect" id="Node000002" href="$class_weather_log.html#afd096713db77f43dd8ca9bf4988a6dac" title="Displays extended monthly statistics including MAD (Mean Absolute Deviation)." alt="" coords="237,5,417,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="451,28,417,28,417,23,451,23"/>
+<area shape="rect" id="Node000003" href="$class_menu.html#ab15fc601495a11889632bfc0649885e6" title="Starts the main menu loop." alt="" coords="104,13,189,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="224,28,190,28,190,23,224,23"/>
+<area shape="rect" id="Node000004" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,38"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="90,28,56,28,56,23,90,23"/>
+</map>

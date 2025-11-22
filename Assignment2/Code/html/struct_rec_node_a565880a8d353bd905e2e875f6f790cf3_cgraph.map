@@ -1,0 +1,19 @@
+<map id="RecNode::RecNode" name="RecNode::RecNode">
+<area shape="rect" id="Node000001" title="Constructs a RecNode from a WeatherRec." alt="" coords="5,153,141,179"/>
+<area shape="rect" id="Node000002" href="$struct_date_time_key.html#a8106da99ba2183d7cb43c9a9e90dcd6d" title="Constructs a key directly from a Date and Time object." alt="" coords="189,104,376,129"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,151,214,130,216,135,129,156"/>
+<area shape="rect" id="Node000008" href="$class_weather_rec.html#a84f83b0a376dd5b8b08962a7cf698b21" title="Returns the observation date." alt="" coords="207,153,358,179"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="142,163,193,163,193,169,142,169"/>
+<area shape="rect" id="Node000009" href="$class_weather_rec.html#a0d84ff9cf7c977b811f4ffd083146224" title="Returns the observation time." alt="" coords="207,203,358,228"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="129,176,216,197,214,202,127,181"/>
+<area shape="rect" id="Node000003" href="$class_date.html#a6304a67f1c13b239eb8e80ad68161e40" title="Returns the day of the month." alt="" coords="436,5,537,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="305,102,423,40,437,33,439,38,425,44,307,106"/>
+<area shape="rect" id="Node000004" href="$class_time.html#a508c3a20933ad90eb9ba0339c51d949d" title="Retrieves the hour component of the time." alt="" coords="430,55,543,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="335,101,420,81,421,86,336,107"/>
+<area shape="rect" id="Node000005" href="$class_time.html#a776335efdef4b465085442f046699b38" title="Retrieves the minute component of the time." alt="" coords="424,104,549,129"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="376,114,411,114,411,119,376,119"/>
+<area shape="rect" id="Node000006" href="$class_date.html#af2dcc6ce51dbb2bd798499a149bdffb7" title="Returns the month number." alt="" coords="429,153,544,179"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="336,127,421,147,420,153,335,132"/>
+<area shape="rect" id="Node000007" href="$class_date.html#ad79ce504482f317ddcfdc4ecad77671f" title="Returns the year." alt="" coords="434,203,539,228"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="352,127,377,138,393,151,403,163,412,175,426,188,437,195,434,199,422,192,408,179,398,166,389,154,375,143,349,132"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="operator&lt;&lt;" name="operator&lt;&lt;">
+<area shape="rect" id="Node000001" title="Stream insertion operator for WeatherRec." alt="" coords="5,104,91,129"/>
+<area shape="rect" id="Node000002" href="$class_weather_rec.html#ae09ee91a9fd0f8ee29bab1e5b8b5be2a" title="Returns the ambient air temperature in °C." alt="" coords="139,5,337,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,102,93,70,137,40,153,33,155,38,140,44,96,74,63,105"/>
+<area shape="rect" id="Node000003" href="$class_weather_rec.html#a84f83b0a376dd5b8b08962a7cf698b21" title="Returns the observation date." alt="" coords="163,55,313,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="90,102,138,89,169,81,171,86,139,94,92,107"/>
+<area shape="rect" id="Node000004" href="$class_weather_rec.html#a0239eff002dd39658144c9c9fcea4dfc" title="Returns the solar radiation in W/m²." alt="" coords="150,104,326,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="91,114,136,114,136,119,91,119"/>
+<area shape="rect" id="Node000005" href="$class_weather_rec.html#a268f234daf3afb5b842582afc7806351" title="Returns the wind speed in m/s." alt="" coords="158,153,318,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="91,125,139,138,174,147,173,152,138,143,90,130"/>
+<area shape="rect" id="Node000006" href="$class_weather_rec.html#a0d84ff9cf7c977b811f4ffd083146224" title="Returns the observation time." alt="" coords="163,203,313,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="63,128,96,158,140,188,159,196,157,201,137,192,93,162,60,132"/>
+</map>

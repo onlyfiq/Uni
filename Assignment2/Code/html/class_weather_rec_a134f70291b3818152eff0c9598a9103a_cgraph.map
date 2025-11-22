@@ -1,0 +1,5 @@
+<map id="WeatherRec::GetYear" name="WeatherRec::GetYear">
+<area shape="rect" id="Node000001" title="Returns the year of the observation." alt="" coords="5,5,156,31"/>
+<area shape="rect" id="Node000002" href="$class_date.html#ad79ce504482f317ddcfdc4ecad77671f" title="Returns the year." alt="" coords="204,5,309,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,15,190,15,190,21,156,21"/>
+</map>

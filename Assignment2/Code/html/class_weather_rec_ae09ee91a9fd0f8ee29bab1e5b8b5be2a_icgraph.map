@@ -1,0 +1,17 @@
+<map id="WeatherRec::GetAmbAirTemp" name="WeatherRec::GetAmbAirTemp">
+<area shape="rect" id="Node000001" title="Returns the ambient air temperature in °C." alt="" coords="500,84,699,109"/>
+<area shape="rect" id="Node000002" href="$class_weather_log.html#a27c671a8a45ec5e18432f201a5ca7d94" title="Displays monthly average ambient air temperature and standard deviation for a year." alt="" coords="237,5,452,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="554,81,451,45,408,33,409,28,453,39,556,76"/>
+<area shape="rect" id="Node000005" href="$class_weather_log.html#a6b53adc701b46e863bd2bb53c31fc63e" title="Computes and displays the Sample Pearson Correlation Coefficient (SPCC) for all records in a given mo..." alt="" coords="255,55,434,80"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="486,86,434,80,434,75,487,81"/>
+<area shape="rect" id="Node000006" href="$class_weather_log.html#afd096713db77f43dd8ca9bf4988a6dac" title="Displays extended monthly statistics including MAD (Mean Absolute Deviation)." alt="" coords="255,105,435,145"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="486,112,435,117,435,112,486,106"/>
+<area shape="rect" id="Node000007" href="$_weather_rec_8cpp.html#a1abd55ad8194633c44b7dc00899b711b" title="Stream insertion operator for WeatherRec." alt="" coords="302,169,387,195"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="559,118,453,159,388,176,387,171,451,154,557,113"/>
+<area shape="rect" id="Node000003" href="$class_menu.html#ab15fc601495a11889632bfc0649885e6" title="Starts the main menu loop." alt="" coords="104,55,189,80"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="272,36,238,45,190,58,189,52,237,39,271,31"/>
+<area shape="rect" id="Node000004" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,55,56,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="90,70,56,70,56,65,90,65"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="241,70,189,70,189,65,241,65"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="261,103,189,82,191,77,263,98"/>
+</map>

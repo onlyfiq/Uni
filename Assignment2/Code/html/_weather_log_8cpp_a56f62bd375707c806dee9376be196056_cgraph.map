@@ -1,0 +1,7 @@
+<map id="CollectRecNode" name="CollectRecNode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,120,56"/>
+<area shape="rect" id="Node000002" href="$class_vector.html#a0151d4cb23bc2c5474418beb125829ca" title="Returns the number of elements currently stored." alt="" coords="168,5,283,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,32,154,26,154,32,121,37"/>
+<area shape="rect" id="Node000003" href="$class_vector.html#a4925a2a69409835d21e8aa86fcd8c1fa" title="Inserts an element at a given index." alt="" coords="175,55,275,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="121,49,162,55,161,61,120,54"/>
+</map>

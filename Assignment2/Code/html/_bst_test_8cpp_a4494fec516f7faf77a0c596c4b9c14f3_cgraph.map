@@ -1,0 +1,19 @@
+<map id="TestDuplicateInsert" name="TestDuplicateInsert">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,104,139,129"/>
+<area shape="rect" id="Node000002" href="$_bst_test_8cpp.html#a367f1fd57e35848c1846ae9068995eff" title=" " alt="" coords="205,5,265,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,102,185,40,194,35,196,40,188,44,93,106"/>
+<area shape="rect" id="Node000003" href="$_bst_test_8cpp.html#a08fc29d8db2869be0ebb5e627aa53904" title=" " alt="" coords="203,55,266,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="114,101,189,78,191,83,115,107"/>
+<area shape="rect" id="Node000004" href="$class_bst.html#a2e0ce4aad5684fd73452d7c895f0fdd3" title="Performs an in&#45;order traversal." alt="" coords="189,104,281,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="139,114,175,114,175,119,139,119"/>
+<area shape="rect" id="Node000006" href="$class_bst.html#a0ea4c71d9f2dc2ea0dbfb367b0da3550" title="Inserts a value into the BST." alt="" coords="193,153,276,179"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="115,127,181,147,179,152,114,132"/>
+<area shape="rect" id="Node000008" href="$_bst_test_8cpp.html#aaf986f1e13f0da831c3d8277cdb860f0" title=" " alt="" coords="187,203,283,228"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="94,127,188,188,198,194,196,198,185,192,91,132"/>
+<area shape="rect" id="Node000005" href="$class_bst.html#af784fd87de2389131973c2de87999595" title="Recursive in&#45;order traversal helper." alt="" coords="331,92,423,117"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="281,110,317,107,317,112,281,115"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="353,93,348,84,350,74,360,68,377,65,396,69,405,77,401,81,394,74,377,71,362,73,355,77,353,83,357,91"/>
+<area shape="rect" id="Node000007" href="$class_bst.html#a6c06c5bb9247d84a71787128a7cc81bd" title="Recursive insert helper." alt="" coords="335,165,418,191"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="277,167,322,171,321,176,276,172"/>
+<area shape="poly" id="edge8_Node000007_Node000007" title=" " alt="" coords="353,166,348,157,350,147,360,141,377,139,396,142,405,151,401,154,394,147,377,144,362,146,355,151,353,156,357,164"/>
+</map>

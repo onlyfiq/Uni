@@ -1,0 +1,6 @@
+<map id="Bst::DeleteTree" name="Bst::DeleteTree">
+<area shape="rect" id="Node000001" title="Removes all nodes in the tree and resets it to empty." alt="" coords="5,29,117,55"/>
+<area shape="rect" id="Node000002" href="$class_bst.html#a54941036770bbc28a2d63a861d30878c" title="Recursive destroy helper." alt="" coords="165,29,276,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,39,151,39,151,45,117,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="194,31,189,21,192,11,203,5,221,3,242,6,252,15,248,19,240,11,221,8,204,10,196,15,194,20,199,28"/>
+</map>

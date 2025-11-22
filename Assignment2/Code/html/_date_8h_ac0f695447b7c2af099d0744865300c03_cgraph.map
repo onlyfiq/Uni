@@ -1,0 +1,9 @@
+<map id="operator&lt;&lt;" name="operator&lt;&lt;">
+<area shape="rect" id="Node000001" title="Inserts a formatted Date into an output stream." alt="" coords="5,55,91,80"/>
+<area shape="rect" id="Node000002" href="$class_date.html#a6304a67f1c13b239eb8e80ad68161e40" title="Returns the day of the month." alt="" coords="145,5,247,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,52,143,33,145,38,88,57"/>
+<area shape="rect" id="Node000003" href="$class_date.html#af2dcc6ce51dbb2bd798499a149bdffb7" title="Returns the month number." alt="" coords="139,55,253,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="91,65,125,65,125,70,91,70"/>
+<area shape="rect" id="Node000004" href="$class_date.html#ad79ce504482f317ddcfdc4ecad77671f" title="Returns the year." alt="" coords="143,104,249,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="88,78,145,97,143,102,86,83"/>
+</map>

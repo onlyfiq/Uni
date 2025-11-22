@@ -1,0 +1,8 @@
+<map id="TestInvariantChecker" name="TestInvariantChecker">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,148,55"/>
+<area shape="rect" id="Node000002" href="$class_bst.html#a0ea4c71d9f2dc2ea0dbfb367b0da3550" title="Inserts a value into the BST." alt="" coords="196,29,279,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,39,182,39,182,45,148,45"/>
+<area shape="rect" id="Node000003" href="$class_bst.html#a6c06c5bb9247d84a71787128a7cc81bd" title="Recursive insert helper." alt="" coords="327,29,409,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="279,39,313,39,313,45,279,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="345,30,341,21,343,11,353,5,368,3,386,6,394,14,390,18,383,11,368,8,355,10,348,14,346,20,350,28"/>
+</map>

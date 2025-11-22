@@ -1,0 +1,30 @@
+<map id="TestEquality" name="TestEquality">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,228,100,253"/>
+<area shape="rect" id="Node000002" href="$class_date.html#ab1ad19969fa570605a6b0cd32b0da822" title="Constructs a Date with specified values." alt="" coords="199,55,283,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,226,99,186,146,139,210,86,213,90,150,143,103,190,67,230"/>
+<area shape="rect" id="Node000004" href="$struct_date_time_key.html#a8106da99ba2183d7cb43c9a9e90dcd6d" title="Constructs a key directly from a Date and Time object." alt="" coords="148,152,335,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="78,226,147,194,187,179,189,184,149,199,80,230"/>
+<area shape="rect" id="Node000010" href="$struct_date_time_key.html#a0922d72045201b0f7a403b821a4957e9" title="Strict weak ordering based on chronological time." alt="" coords="383,301,545,327"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="100,228,150,221,210,218,274,223,336,240,352,250,362,263,370,276,384,288,396,294,393,298,381,292,366,279,357,266,348,254,334,244,273,228,210,223,151,226,101,233"/>
+<area shape="rect" id="Node000011" href="$struct_date_time_key.html#a45327397802f32764b1fa503318eee14" title="Equality comparison." alt="" coords="156,253,327,279"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="101,244,143,250,142,255,100,250"/>
+<area shape="rect" id="Node000012" href="$struct_date_time_key.html#a89ef9de00b32aca87122916bd0b45f15" title="Reverse chronological comparison." alt="" coords="160,303,323,328"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="76,251,109,270,149,289,170,296,168,301,147,294,107,275,73,256"/>
+<area shape="rect" id="Node000013" href="$class_time.html#a2adbcb8f0624f4afa0fc255d08f6c56c" title="Parameterized constructor." alt="" coords="198,352,285,377"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="65,252,98,295,122,318,149,338,186,353,184,358,147,343,119,323,94,298,60,255"/>
+<area shape="rect" id="Node000003" href="$class_date.html#ad62ff590543681469652347d01139092" title="Sets the date to the specified values." alt="" coords="412,5,516,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="283,56,398,30,399,35,284,61"/>
+<area shape="rect" id="Node000005" href="$class_date.html#a6304a67f1c13b239eb8e80ad68161e40" title="Returns the day of the month." alt="" coords="413,55,515,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="263,150,316,120,382,89,401,82,403,87,384,94,318,125,265,154"/>
+<area shape="rect" id="Node000006" href="$class_time.html#a508c3a20933ad90eb9ba0339c51d949d" title="Retrieves the hour component of the time." alt="" coords="407,104,521,129"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="300,149,393,129,394,134,302,155"/>
+<area shape="rect" id="Node000007" href="$class_time.html#a776335efdef4b465085442f046699b38" title="Retrieves the minute component of the time." alt="" coords="401,153,527,179"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="335,163,388,163,388,168,335,168"/>
+<area shape="rect" id="Node000008" href="$class_date.html#af2dcc6ce51dbb2bd798499a149bdffb7" title="Returns the month number." alt="" coords="407,203,521,228"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="299,175,395,197,394,202,298,180"/>
+<area shape="rect" id="Node000009" href="$class_date.html#ad79ce504482f317ddcfdc4ecad77671f" title="Returns the year." alt="" coords="411,252,517,277"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="292,175,336,194,351,206,361,217,370,228,384,238,400,246,397,251,381,243,366,232,357,221,347,210,333,199,290,180"/>
+<area shape="poly" id="edge12_Node000012_Node000010" title=" " alt="" coords="323,312,369,312,369,317,323,318"/>
+<area shape="rect" id="Node000014" href="$class_time.html#aa4afccb7d08f4662fb9eeb5fcb1893aa" title="Sets the time." alt="" coords="411,352,517,377"/>
+<area shape="poly" id="edge14_Node000013_Node000014" title=" " alt="" coords="285,362,397,362,397,367,285,367"/>
+</map>

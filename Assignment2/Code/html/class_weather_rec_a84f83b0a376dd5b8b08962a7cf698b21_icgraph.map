@@ -1,0 +1,13 @@
+<map id="WeatherRec::GetDate" name="WeatherRec::GetDate">
+<area shape="rect" id="Node000001" title="Returns the observation date." alt="" coords="624,31,775,56"/>
+<area shape="rect" id="Node000002" href="$_weather_rec_8cpp.html#a1abd55ad8194633c44b7dc00899b711b" title="Stream insertion operator for WeatherRec." alt="" coords="465,5,551,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="610,34,551,26,551,21,611,29"/>
+<area shape="rect" id="Node000003" href="$struct_rec_node.html#a565880a8d353bd905e2e875f6f790cf3" title="Constructs a RecNode from a WeatherRec." alt="" coords="440,55,576,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="611,57,577,61,576,56,610,52"/>
+<area shape="rect" id="Node000004" href="$class_weather_log.html#a0d33145e63a25daded3544d160d453b1" title="Loads and parses all weather data from CSV files." alt="" coords="237,55,392,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="426,70,392,70,392,65,426,65"/>
+<area shape="rect" id="Node000005" href="$class_menu.html#ab15fc601495a11889632bfc0649885e6" title="Starts the main menu loop." alt="" coords="104,55,189,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="224,70,190,70,190,65,224,65"/>
+<area shape="rect" id="Node000006" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,55,56,80"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="90,70,56,70,56,65,90,65"/>
+</map>

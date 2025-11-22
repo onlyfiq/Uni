@@ -1,0 +1,24 @@
+<map id="Time::GetHours" name="Time::GetHours">
+<area shape="rect" id="Node000001" title="Retrieves the hour component of the time." alt="" coords="924,105,1037,131"/>
+<area shape="rect" id="Node000002" href="$struct_date_time_key.html#a8106da99ba2183d7cb43c9a9e90dcd6d" title="Constructs a key directly from a Date and Time object." alt="" coords="689,80,876,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="910,112,876,107,877,102,911,106"/>
+<area shape="rect" id="Node000011" href="$_time_8cpp.html#a5b08e472543c1992d2cadde99da4193b" title="Outputs a Time object to a stream." alt="" coords="740,129,825,155"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="911,129,826,139,826,134,910,124"/>
+<area shape="rect" id="Node000003" href="$class_weather_rec.html#a3f6f33d2ac4d87544957cd1f67e8d64b" title="Generates a sortable key combining date and time." alt="" coords="440,5,641,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="736,78,641,45,599,33,600,28,642,39,738,73"/>
+<area shape="rect" id="Node000004" href="$struct_rec_node.html#a565880a8d353bd905e2e875f6f790cf3" title="Constructs a RecNode from a WeatherRec." alt="" coords="473,55,609,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="676,84,609,77,609,72,676,79"/>
+<area shape="rect" id="Node000008" href="$_date_time_key_test_8cpp.html#ad457a8843c7ad36c73495c707fcc56f1" title=" " alt="" coords="493,104,588,129"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="676,106,589,115,588,109,675,101"/>
+<area shape="rect" id="Node000010" href="$_date_time_key_test_8cpp.html#a7bbe1d9b5a085c2df82bbcdeefe161c3" title=" " alt="" coords="493,153,589,179"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="716,112,690,120,667,133,642,144,590,159,588,154,640,140,664,128,688,116,715,107"/>
+<area shape="rect" id="Node000005" href="$class_weather_log.html#a0d33145e63a25daded3544d160d453b1" title="Loads and parses all weather data from CSV files." alt="" coords="237,55,392,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="458,70,392,70,392,65,458,65"/>
+<area shape="rect" id="Node000006" href="$class_menu.html#ab15fc601495a11889632bfc0649885e6" title="Starts the main menu loop." alt="" coords="104,55,189,80"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="224,70,190,70,190,65,224,65"/>
+<area shape="rect" id="Node000007" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,55,56,80"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="90,70,56,70,56,65,90,65"/>
+<area shape="rect" id="Node000009" href="$_date_time_key_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="289,128,340,153"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="480,126,340,141,340,135,479,120"/>
+<area shape="poly" id="edge10_Node000010_Node000009" title=" " alt="" coords="479,162,340,146,340,141,479,156"/>
+</map>

@@ -1,0 +1,20 @@
+<map id="TestDeleteLeaf" name="TestDeleteLeaf">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,113,105"/>
+<area shape="rect" id="Node000002" href="$_bst_test_8cpp.html#a367f1fd57e35848c1846ae9068995eff" title=" " alt="" coords="190,5,250,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,78,160,40,176,32,179,37,162,44,86,82"/>
+<area shape="rect" id="Node000003" href="$class_bst.html#a5f347ed1e8bbae3e46a53b0e26917277" title="Deletes a node containing the specified value." alt="" coords="161,55,279,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="113,82,147,76,148,81,114,87"/>
+<area shape="rect" id="Node000005" href="$class_bst.html#a0ea4c71d9f2dc2ea0dbfb367b0da3550" title="Inserts a value into the BST." alt="" coords="179,104,261,129"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="114,98,165,106,165,111,113,103"/>
+<area shape="rect" id="Node000007" href="$class_bst.html#a837929f7e97137b80480638f2637b226" title="Searches for a value in the BST." alt="" coords="175,165,265,191"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="86,103,184,156,181,161,83,108"/>
+<area shape="rect" id="Node000004" href="$class_bst.html#a878d2405dd7b21a5a3a426912f26c4ff" title="Recursive delete&#45;node helper." alt="" coords="327,31,441,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="278,56,313,51,314,56,279,61"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="357,32,351,22,354,13,365,6,384,4,406,7,416,16,412,20,404,12,384,9,367,11,358,16,356,22,361,29"/>
+<area shape="rect" id="Node000006" href="$class_bst.html#a6c06c5bb9247d84a71787128a7cc81bd" title="Recursive insert helper." alt="" coords="343,104,425,129"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="262,114,328,114,328,119,262,119"/>
+<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="357,105,351,96,354,86,365,80,384,77,406,81,416,89,412,93,404,86,384,83,367,85,358,89,356,95,361,102"/>
+<area shape="rect" id="Node000008" href="$class_bst.html#af6d0fea4b986fd2bb6a6568a40a3fcb1" title="Recursive search helper." alt="" coords="339,177,429,203"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="266,179,326,183,326,188,265,184"/>
+<area shape="poly" id="edge10_Node000008_Node000008" title=" " alt="" coords="357,179,351,169,354,159,365,153,384,151,406,154,416,163,412,167,404,159,384,156,367,158,358,163,356,168,361,176"/>
+</map>

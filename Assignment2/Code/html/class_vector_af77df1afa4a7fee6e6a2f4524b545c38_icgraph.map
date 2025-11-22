@@ -1,0 +1,17 @@
+<map id="Vector::Delete" name="Vector::Delete">
+<area shape="rect" id="Node000001" title="Deletes the element at a given index." alt="" coords="279,80,384,105"/>
+<area shape="rect" id="Node000002" href="$_vector_test_8cpp.html#ace663997e6cd27707db562503e6835c8" title=" " alt="" coords="125,5,209,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="293,76,230,44,203,33,205,28,232,40,296,71"/>
+<area shape="rect" id="Node000004" href="$_vector_test2_8cpp.html#ade997cd2adc8dfc60db270d4bda97c1a" title=" " alt="" coords="111,55,224,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="265,85,224,79,225,73,266,80"/>
+<area shape="rect" id="Node000006" href="$_vector_test2_8cpp.html#ac4504582c4ad6300c2da9971d772bd2d" title=" " alt="" coords="104,104,231,129"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="265,105,231,110,231,105,265,100"/>
+<area shape="rect" id="Node000007" href="$_vector_test2_8cpp.html#a175099012c1433ecb6f0e280d3b7d750" title=" " alt="" coords="127,153,208,179"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="294,114,232,143,202,156,200,151,230,138,292,109"/>
+<area shape="rect" id="Node000003" href="$_vector_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="111,21,56,21,56,15,111,15"/>
+<area shape="rect" id="Node000005" href="$_vector_test2_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,104,56,129"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="120,87,57,110,55,105,118,82"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="90,119,56,119,56,114,90,114"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="118,151,55,128,57,123,120,146"/>
+</map>

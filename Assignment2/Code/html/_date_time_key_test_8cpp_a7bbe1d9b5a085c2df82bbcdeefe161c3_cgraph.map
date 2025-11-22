@@ -1,0 +1,28 @@
+<map id="TestOrdering" name="TestOrdering">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,251,101,276"/>
+<area shape="rect" id="Node000002" href="$class_date.html#ab1ad19969fa570605a6b0cd32b0da822" title="Constructs a Date with specified values." alt="" coords="201,67,285,92"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,249,147,164,216,99,219,103,151,168,69,252"/>
+<area shape="rect" id="Node000004" href="$struct_date_time_key.html#a8106da99ba2183d7cb43c9a9e90dcd6d" title="Constructs a key directly from a Date and Time object." alt="" coords="149,177,336,203"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="86,248,195,205,197,210,88,253"/>
+<area shape="rect" id="Node000010" href="$struct_date_time_key.html#a0922d72045201b0f7a403b821a4957e9" title="Strict weak ordering based on chronological time." alt="" coords="384,301,547,327"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="102,264,209,273,336,287,389,296,388,301,336,293,209,278,101,269"/>
+<area shape="rect" id="Node000011" href="$struct_date_time_key.html#a89ef9de00b32aca87122916bd0b45f15" title="Reverse chronological comparison." alt="" coords="161,301,324,327"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="102,274,182,295,180,300,101,279"/>
+<area shape="rect" id="Node000012" href="$class_time.html#a2adbcb8f0624f4afa0fc255d08f6c56c" title="Parameterized constructor." alt="" coords="199,351,286,376"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="69,274,104,306,151,337,187,350,185,355,148,342,100,310,65,278"/>
+<area shape="rect" id="Node000003" href="$class_date.html#ad62ff590543681469652347d01139092" title="Sets the date to the specified values." alt="" coords="413,5,517,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="284,65,405,32,406,37,286,71"/>
+<area shape="rect" id="Node000005" href="$class_date.html#a6304a67f1c13b239eb8e80ad68161e40" title="Returns the day of the month." alt="" coords="415,55,516,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="257,175,310,133,345,110,383,89,400,82,402,86,385,94,348,114,313,138,260,179"/>
+<area shape="rect" id="Node000006" href="$class_time.html#a508c3a20933ad90eb9ba0339c51d949d" title="Retrieves the hour component of the time." alt="" coords="409,104,522,129"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="278,175,383,138,406,131,408,136,385,143,280,180"/>
+<area shape="rect" id="Node000007" href="$class_time.html#a776335efdef4b465085442f046699b38" title="Retrieves the minute component of the time." alt="" coords="403,153,528,179"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="336,177,389,172,389,177,336,183"/>
+<area shape="rect" id="Node000008" href="$class_date.html#af2dcc6ce51dbb2bd798499a149bdffb7" title="Returns the month number." alt="" coords="408,203,523,228"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="336,198,394,205,394,210,336,203"/>
+<area shape="rect" id="Node000009" href="$class_date.html#ad79ce504482f317ddcfdc4ecad77671f" title="Returns the year." alt="" coords="413,252,518,277"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="279,200,385,238,408,245,406,251,383,243,277,205"/>
+<area shape="poly" id="edge11_Node000011_Node000010" title=" " alt="" coords="324,311,370,311,370,317,324,317"/>
+<area shape="rect" id="Node000013" href="$class_time.html#aa4afccb7d08f4662fb9eeb5fcb1893aa" title="Sets the time." alt="" coords="412,351,519,376"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="286,361,398,361,398,366,286,366"/>
+</map>

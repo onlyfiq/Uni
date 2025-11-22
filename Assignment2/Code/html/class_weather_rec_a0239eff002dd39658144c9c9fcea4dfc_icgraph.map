@@ -1,0 +1,14 @@
+<map id="WeatherRec::GetSolarRad" name="WeatherRec::GetSolarRad">
+<area shape="rect" id="Node000001" title="Returns the solar radiation in W/m²." alt="" coords="465,63,641,88"/>
+<area shape="rect" id="Node000002" href="$class_weather_log.html#a6b53adc701b46e863bd2bb53c31fc63e" title="Computes and displays the Sample Pearson Correlation Coefficient (SPCC) for all records in a given mo..." alt="" coords="238,5,417,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="489,62,377,33,379,28,490,57"/>
+<area shape="rect" id="Node000005" href="$class_weather_log.html#afd096713db77f43dd8ca9bf4988a6dac" title="Displays extended monthly statistics including MAD (Mean Absolute Deviation)." alt="" coords="237,55,417,95"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="451,78,418,78,418,73,451,73"/>
+<area shape="rect" id="Node000006" href="$_weather_rec_8cpp.html#a1abd55ad8194633c44b7dc00899b711b" title="Stream insertion operator for WeatherRec." alt="" coords="285,120,370,145"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="490,94,371,125,370,119,489,89"/>
+<area shape="rect" id="Node000003" href="$class_menu.html#ab15fc601495a11889632bfc0649885e6" title="Starts the main menu loop." alt="" coords="104,35,189,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="236,36,190,43,189,38,235,30"/>
+<area shape="rect" id="Node000004" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,35,56,60"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="90,50,56,50,56,45,90,45"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="223,62,189,57,190,51,224,57"/>
+</map>

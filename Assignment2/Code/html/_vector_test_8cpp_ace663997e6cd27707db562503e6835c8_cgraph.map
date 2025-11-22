@@ -1,0 +1,9 @@
+<map id="DeleteTest" name="DeleteTest">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,89,80"/>
+<area shape="rect" id="Node000002" href="$class_vector.html#af77df1afa4a7fee6e6a2f4524b545c38" title="Deletes the element at a given index." alt="" coords="146,5,251,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,52,145,33,147,38,88,57"/>
+<area shape="rect" id="Node000003" href="$class_vector.html#a0151d4cb23bc2c5474418beb125829ca" title="Returns the number of elements currently stored." alt="" coords="141,55,256,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="90,65,128,65,128,70,90,70"/>
+<area shape="rect" id="Node000004" href="$class_vector.html#a2054758707c08325ef160fd4dfc48ff7" title="Provides indexed access to elements with bounds checking." alt="" coords="137,104,260,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="88,78,147,97,145,102,86,83"/>
+</map>

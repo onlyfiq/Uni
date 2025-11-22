@@ -1,0 +1,68 @@
+<map id="WeatherLog::LoadData" name="WeatherLog::LoadData">
+<area shape="rect" id="Node000001" title="Loads and parses all weather data from CSV files." alt="" coords="5,401,160,427"/>
+<area shape="rect" id="Node000002" href="$class_bst.html#ac9124c96ba73bebfbe93a1179908292a" title="Constructs an empty BST." alt="" coords="260,5,331,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,401,86,337,103,240,119,187,140,133,169,84,206,40,225,28,245,20,247,25,227,32,210,44,174,87,145,136,124,188,108,241,91,338,87,401"/>
+<area shape="rect" id="Node000003" href="$class_map.html#a92a6452f107b0f98eb91830e1c2467a1" title="Checks whether a given key exists in the map." alt="" coords="242,55,349,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="82,401,90,344,109,261,125,215,146,169,173,126,206,89,227,76,230,81,210,93,177,130,151,172,130,217,114,262,95,345,88,402"/>
+<area shape="rect" id="Node000004" href="$class_date.html#ab1ad19969fa570605a6b0cd32b0da822" title="Constructs a Date with specified values." alt="" coords="253,104,337,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="83,400,94,351,115,281,132,242,152,204,177,169,206,139,222,128,239,121,241,126,224,133,210,143,181,173,156,207,136,245,120,282,99,353,89,401"/>
+<area shape="rect" id="Node000006" href="$class_map.html#ac441bb638a197337991574583cf53166" title="Retrieves all keys stored in the map." alt="" coords="242,153,349,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="85,400,98,359,122,302,157,241,180,212,206,188,228,176,230,180,210,192,184,216,162,244,126,304,103,361,90,402"/>
+<area shape="rect" id="Node000007" href="$class_vector.html#a0151d4cb23bc2c5474418beb125829ca" title="Returns the number of elements currently stored." alt="" coords="238,203,353,228"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="87,400,103,367,128,323,163,277,206,237,224,228,226,232,210,241,167,280,133,326,108,370,92,402"/>
+<area shape="rect" id="Node000008" href="$class_vector.html#a4925a2a69409835d21e8aa86fcd8c1fa" title="Inserts an element at a given index." alt="" coords="245,252,345,277"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="91,399,136,345,169,313,207,286,231,275,233,280,209,291,173,317,140,349,95,403"/>
+<area shape="rect" id="Node000009" href="$_weather_log_8cpp.html#af3b74da6d839319fd7cf9eec36b186e7" title=" " alt="" coords="249,325,341,351"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="118,399,245,353,247,358,120,404"/>
+<area shape="rect" id="Node000012" href="$class_vector.html#a2054758707c08325ef160fd4dfc48ff7" title="Provides indexed access to elements with bounds checking." alt="" coords="463,376,585,401"/>
+<area shape="poly" id="edge22_Node000001_Node000012" title=" " alt="" coords="160,407,449,390,449,396,161,412"/>
+<area shape="rect" id="Node000013" href="$_weather_log_8cpp.html#a412eb31830a53e9a294f375213cf7d2d" title=" " alt="" coords="242,427,349,452"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="161,421,228,429,228,434,160,426"/>
+<area shape="rect" id="Node000014" href="$class_map.html#a06f9fc5d4c9a639994f8d8eb280ae7ed" title="Default constructor. Creates an empty map." alt="" coords="255,476,335,501"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="115,424,209,461,243,472,241,477,207,466,113,429"/>
+<area shape="rect" id="Node000015" href="$class_bst.html#af0e4e350a2b056e9ad8211f4bc9de407" title="Copy assignment operator." alt="" coords="243,525,348,551"/>
+<area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="98,425,145,467,176,490,209,510,230,519,228,524,207,515,173,494,141,471,95,429"/>
+<area shape="rect" id="Node000018" href="$class_map.html#a789f3fe57aae36db37e3efcffda1686a" title="Accesses (or creates) the value associated with a key." alt="" coords="240,575,351,600"/>
+<area shape="poly" id="edge21_Node000001_Node000018" title=" " alt="" coords="93,425,137,490,170,528,209,560,228,569,226,574,207,564,167,531,133,493,89,428"/>
+<area shape="rect" id="Node000019" href="$struct_rec_node.html#a565880a8d353bd905e2e875f6f790cf3" title="Constructs a RecNode from a WeatherRec." alt="" coords="227,624,363,649"/>
+<area shape="poly" id="edge23_Node000001_Node000019" title=" " alt="" coords="91,426,105,462,130,512,165,564,186,588,210,609,220,616,217,620,206,613,182,592,161,568,125,515,101,464,86,428"/>
+<area shape="rect" id="Node000028" href="$class_time.html#a2adbcb8f0624f4afa0fc255d08f6c56c" title="Parameterized constructor." alt="" coords="252,673,339,699"/>
+<area shape="poly" id="edge32_Node000001_Node000028" title=" " alt="" coords="89,426,101,471,124,534,160,601,183,632,210,659,240,675,238,679,206,663,179,635,155,604,119,536,96,472,84,428"/>
+<area shape="rect" id="Node000030" href="$class_vector.html#a39d6069675db4ecfc1ab81d440da759a" title="Constructs an empty Vector." alt="" coords="242,723,349,748"/>
+<area shape="poly" id="edge34_Node000001_Node000030" title=" " alt="" coords="88,426,97,479,118,555,134,596,154,637,179,675,210,708,230,721,228,725,206,712,175,678,149,640,129,598,113,556,92,480,83,427"/>
+<area shape="rect" id="Node000031" href="$class_weather_rec.html#aa785e36bf88109cbbc04bb1815d31ed2" title="Parameterized constructor for creating a complete weather record." alt="" coords="208,772,383,797"/>
+<area shape="poly" id="edge35_Node000001_Node000031" title=" " alt="" coords="87,427,93,487,111,576,127,625,148,674,175,719,210,759,215,763,211,767,206,763,171,722,143,676,122,627,106,578,88,487,82,427"/>
+<area shape="rect" id="Node000005" href="$class_date.html#ad62ff590543681469652347d01139092" title="Sets the date to the specified values." alt="" coords="472,104,576,129"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="338,114,458,114,458,119,338,119"/>
+<area shape="poly" id="edge12_Node000009_Node000009" title=" " alt="" coords="261,327,253,317,257,307,272,301,295,299,325,302,336,311,333,316,323,307,295,304,273,306,261,311,259,316,265,324"/>
+<area shape="rect" id="Node000010" href="$class_bst.html#a0ea4c71d9f2dc2ea0dbfb367b0da3550" title="Inserts a value into the BST." alt="" coords="483,325,565,351"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="342,335,469,335,469,341,342,341"/>
+<area shape="poly" id="edge13_Node000009_Node000012" title=" " alt="" coords="342,346,453,370,452,376,341,351"/>
+<area shape="rect" id="Node000011" href="$class_bst.html#a6c06c5bb9247d84a71787128a7cc81bd" title="Recursive insert helper." alt="" coords="687,325,769,351"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="566,335,673,335,673,341,566,341"/>
+<area shape="poly" id="edge11_Node000011_Node000011" title=" " alt="" coords="695,327,688,317,691,307,705,301,728,299,756,302,768,312,764,316,754,307,728,304,706,306,695,311,693,316,699,324"/>
+<area shape="rect" id="Node000016" href="$class_bst.html#a96a42fa1b26624c234b38366f9ec4535" title="Recursively clones a subtree." alt="" coords="473,452,575,477"/>
+<area shape="poly" id="edge17_Node000015_Node000016" title=" " alt="" coords="345,523,382,510,430,486,459,477,460,482,432,491,384,515,346,528"/>
+<area shape="rect" id="Node000017" href="$class_bst.html#a54941036770bbc28a2d63a861d30878c" title="Recursive destroy helper." alt="" coords="469,525,579,551"/>
+<area shape="poly" id="edge19_Node000015_Node000017" title=" " alt="" coords="349,535,455,535,455,541,349,541"/>
+<area shape="poly" id="edge18_Node000016_Node000016" title=" " alt="" coords="491,454,484,444,487,434,501,428,524,425,552,429,564,438,560,442,550,434,524,431,502,433,491,437,489,443,495,450"/>
+<area shape="poly" id="edge20_Node000017_Node000017" title=" " alt="" coords="491,527,484,517,487,507,501,501,524,499,552,502,564,512,560,516,550,507,524,504,502,506,491,511,489,516,495,524"/>
+<area shape="rect" id="Node000020" href="$struct_date_time_key.html#a8106da99ba2183d7cb43c9a9e90dcd6d" title="Constructs a key directly from a Date and Time object." alt="" coords="431,575,617,600"/>
+<area shape="poly" id="edge24_Node000019_Node000020" title=" " alt="" coords="354,621,450,600,451,606,355,627"/>
+<area shape="rect" id="Node000026" href="$class_weather_rec.html#a84f83b0a376dd5b8b08962a7cf698b21" title="Returns the observation date." alt="" coords="449,624,599,649"/>
+<area shape="poly" id="edge30_Node000019_Node000026" title=" " alt="" coords="364,634,435,634,435,639,364,639"/>
+<area shape="rect" id="Node000027" href="$class_weather_rec.html#a0d84ff9cf7c977b811f4ffd083146224" title="Returns the observation time." alt="" coords="449,673,599,699"/>
+<area shape="poly" id="edge31_Node000019_Node000027" title=" " alt="" coords="355,647,451,668,450,673,354,652"/>
+<area shape="rect" id="Node000021" href="$class_date.html#a6304a67f1c13b239eb8e80ad68161e40" title="Returns the day of the month." alt="" coords="677,476,779,501"/>
+<area shape="poly" id="edge25_Node000020_Node000021" title=" " alt="" coords="588,572,616,560,630,548,640,536,649,524,664,511,673,505,676,510,667,515,653,527,644,539,634,552,619,564,590,577"/>
+<area shape="rect" id="Node000022" href="$class_time.html#a508c3a20933ad90eb9ba0339c51d949d" title="Retrieves the hour component of the time." alt="" coords="671,525,785,551"/>
+<area shape="poly" id="edge26_Node000020_Node000022" title=" " alt="" coords="577,572,661,551,662,557,578,577"/>
+<area shape="rect" id="Node000023" href="$class_time.html#a776335efdef4b465085442f046699b38" title="Retrieves the minute component of the time." alt="" coords="665,575,791,600"/>
+<area shape="poly" id="edge27_Node000020_Node000023" title=" " alt="" coords="618,585,652,585,652,590,618,590"/>
+<area shape="rect" id="Node000024" href="$class_date.html#af2dcc6ce51dbb2bd798499a149bdffb7" title="Returns the month number." alt="" coords="671,624,785,649"/>
+<area shape="poly" id="edge28_Node000020_Node000024" title=" " alt="" coords="578,597,662,618,661,623,577,603"/>
+<area shape="rect" id="Node000025" href="$class_date.html#ad79ce504482f317ddcfdc4ecad77671f" title="Returns the year." alt="" coords="675,673,781,699"/>
+<area shape="poly" id="edge29_Node000020_Node000025" title=" " alt="" coords="593,598,619,609,634,621,644,634,653,646,667,659,678,665,676,670,664,663,649,650,640,637,631,625,616,614,591,602"/>
+<area shape="rect" id="Node000029" href="$class_time.html#aa4afccb7d08f4662fb9eeb5fcb1893aa" title="Sets the time." alt="" coords="471,723,577,748"/>
+<area shape="poly" id="edge33_Node000028_Node000029" title=" " alt="" coords="340,693,458,718,457,724,339,698"/>
+</map>

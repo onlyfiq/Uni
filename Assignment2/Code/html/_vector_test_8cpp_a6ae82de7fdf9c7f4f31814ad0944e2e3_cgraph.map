@@ -1,0 +1,9 @@
+<map id="InsertTest" name="InsertTest">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,84,80"/>
+<area shape="rect" id="Node000002" href="$class_vector.html#a0151d4cb23bc2c5474418beb125829ca" title="Returns the number of elements currently stored." alt="" coords="136,5,251,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,52,140,33,142,38,84,57"/>
+<area shape="rect" id="Node000003" href="$class_vector.html#a4925a2a69409835d21e8aa86fcd8c1fa" title="Inserts an element at a given index." alt="" coords="143,55,243,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="84,65,129,65,129,70,84,70"/>
+<area shape="rect" id="Node000004" href="$class_vector.html#a2054758707c08325ef160fd4dfc48ff7" title="Provides indexed access to elements with bounds checking." alt="" coords="132,104,255,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="84,78,142,97,140,102,83,83"/>
+</map>

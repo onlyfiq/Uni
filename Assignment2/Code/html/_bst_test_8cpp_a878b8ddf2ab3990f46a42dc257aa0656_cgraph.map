@@ -1,0 +1,15 @@
+<map id="TestInsertAndSearch" name="TestInsertAndSearch">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,148,80"/>
+<area shape="rect" id="Node000002" href="$_bst_test_8cpp.html#a367f1fd57e35848c1846ae9068995eff" title=" " alt="" coords="211,5,271,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,52,197,28,199,33,120,57"/>
+<area shape="rect" id="Node000003" href="$class_bst.html#a0ea4c71d9f2dc2ea0dbfb367b0da3550" title="Inserts a value into the BST." alt="" coords="200,55,283,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="148,65,186,65,186,70,148,70"/>
+<area shape="rect" id="Node000005" href="$class_bst.html#a837929f7e97137b80480638f2637b226" title="Searches for a value in the BST." alt="" coords="196,109,287,135"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="116,77,190,102,188,107,115,83"/>
+<area shape="rect" id="Node000004" href="$class_bst.html#a6c06c5bb9247d84a71787128a7cc81bd" title="Recursive insert helper." alt="" coords="338,48,421,73"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="283,63,324,61,324,66,283,68"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="356,49,351,40,354,30,363,24,379,21,398,25,406,33,402,37,395,29,379,27,365,29,358,33,357,39,361,47"/>
+<area shape="rect" id="Node000006" href="$class_bst.html#af6d0fea4b986fd2bb6a6568a40a3fcb1" title="Recursive search helper." alt="" coords="335,121,424,147"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="287,123,321,126,321,132,287,129"/>
+<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="356,122,351,113,354,103,363,97,379,95,398,98,406,106,402,110,395,103,379,100,365,102,358,107,357,112,361,120"/>
+</map>

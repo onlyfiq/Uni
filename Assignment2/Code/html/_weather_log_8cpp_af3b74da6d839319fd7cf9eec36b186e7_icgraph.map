@@ -1,0 +1,10 @@
+<map id="InsertMiddle" name="InsertMiddle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="440,29,532,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="516,19,507,11,486,8,468,10,459,15,457,20,462,28,457,31,451,21,455,11,467,5,486,3,509,6,519,15"/>
+<area shape="rect" id="Node000002" href="$class_weather_log.html#a0d33145e63a25daded3544d160d453b1" title="Loads and parses all weather data from CSV files." alt="" coords="237,29,392,55"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="426,45,392,45,392,39,426,39"/>
+<area shape="rect" id="Node000003" href="$class_menu.html#ab15fc601495a11889632bfc0649885e6" title="Starts the main menu loop." alt="" coords="104,29,189,55"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="224,45,190,45,190,39,224,39"/>
+<area shape="rect" id="Node000004" href="$_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,56,55"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="90,45,56,45,56,39,90,39"/>
+</map>
