@@ -16,9 +16,11 @@ using std::stof;
 using std::invalid_argument;
 using std::out_of_range;
 
-// Constructor: initialize empty weather log
+// Default constructor: initializes an empty WeatherLog
 WeatherLog::WeatherLog() {}
 
+// Utility functions
+// Check if a string represents a valid numeric value
 bool IsValidNumber(const string& s)
 {
     if(s.empty())
@@ -26,7 +28,7 @@ bool IsValidNumber(const string& s)
         return false;
     }
 
-    // handle invalid words like NA, N/A, --- etc.
+    // Convert to lowercase to handle "NA", "N/A", "---", "-9999"
     string lower;
     for(size_t i = 0; i < s.size(); ++i)
     {
@@ -43,9 +45,7 @@ bool IsValidNumber(const string& s)
         return false;
     }
 
-    bool hasDigit = false;
-    bool hasDot = false;
-    bool hasE = false;
+    bool hasDigit = false, hasDot = false, hasE = false;
 
     for(size_t i = 0; i < s.size(); ++i)
     {
@@ -87,7 +87,9 @@ bool IsValidNumber(const string& s)
     return hasDigit;
 }
 
-// Recursive middle insertion to build balanced BST
+// Helper to build balanced BST
+
+// Recursively insert the middle element of a sorted vector to build a balanced BST
 void InsertMiddle(Bst<RecNode>& bst, Vector<RecNode>& nodes, int start, int end)
 {
     if(start > end)
@@ -101,10 +103,12 @@ void InsertMiddle(Bst<RecNode>& bst, Vector<RecNode>& nodes, int start, int end)
     InsertMiddle(bst, nodes, mid + 1, end);
 }
 
-// Global traversal buffer
+// Global traversal buffer and callback
+
+// Used to temporarily store nodes during in-order traversal
 static Vector<RecNode>* g_traverseBuffer = nullptr;
 
-// Function pointer callback to collect nodes
+// Function pointer used as callback to collect RecNode during traversal
 static void CollectRecNode(const RecNode& node)
 {
     if (g_traverseBuffer != nullptr)
@@ -113,13 +117,11 @@ static void CollectRecNode(const RecNode& node)
     }
 }
 
-// Load CSV data into weatherData
+// Load weather data from CSV
 bool WeatherLog::LoadData()
 {
-    // Load the data source
+    // Data source file listing CSVs
     string dataSourceFile = "data/data_source.txt";
-
-    // Read the CSV file name from data_source.txt
     ifstream sourceFile(dataSourceFile);
     if(!sourceFile.is_open())
     {
@@ -136,6 +138,7 @@ bool WeatherLog::LoadData()
         {
             continue;
         }
+
         string csvFilePath = "data/" + csvFileName;
         ifstream csvFile(csvFilePath);
         if(!csvFile.is_open())
@@ -143,9 +146,10 @@ bool WeatherLog::LoadData()
             cout << "Failed to open CSV File" << csvFilePath << endl;
             continue;
         }
+
         cout <<  "Reading " << csvFilePath << "..." << endl;
 
-        // Read header and map columns
+        // Read CSV header and map column indices
         string headerLine;
         getline(csvFile, headerLine);
         stringstream headerStream(headerLine);
@@ -185,9 +189,10 @@ bool WeatherLog::LoadData()
             continue;
         }
 
+        // Temporary storage of records by year and month
         Map<int, Map<int, Vector<RecNode>>> tempData;
 
-        // Read data rows
+        // Read each row of CSV
         string line;
         while(getline(csvFile, line))
         {
@@ -205,31 +210,27 @@ bool WeatherLog::LoadData()
                 continue;
             }
 
-            // Parse WAST column into Date and Time
-            string wast = row[idxWAST]; // e.g., "01/01/2025 12:00"
+            // Parse date and time from WAST
+            string wast = row[idxWAST];
             int day, month, year, hour, minute;
             if(sscanf(wast.c_str(), "%d/%d/%d %d:%d", &day, &month, &year, &hour, &minute) != 5)
             {
-//                cout << "Skipping invalid WAST: " << wast << endl;
                 continue;
             }
 
+            // Skip row if any numeric fields are invalid
             if(!IsValidNumber(row[idxWind]) ||
                     !IsValidNumber(row[idxTemp]) ||
                     !IsValidNumber(row[idxSolar]))
             {
-//                cout << "Skipping invalid numeric row: " << line << endl;
                 continue;
             }
 
             try
             {
-                float wind = stof(row[idxWind]);
+                float wind = stof(row[idxWind]) * 3.6f;       // convert m/s to km/h
                 float temp = stof(row[idxTemp]);
-                float solar = stof(row[idxSolar]);
-
-                wind = wind * 3.6f;
-                solar = solar * 0.0001667f;
+                float solar = stof(row[idxSolar]) * 0.0001667f; // convert W/m2 to kWh/m2
 
                 Date d(day, month, year);
                 Time t(hour, minute);
@@ -248,19 +249,17 @@ bool WeatherLog::LoadData()
                 tempData[year][month].Insert(tempData[year][month].GetSize(), recNode);
                 totalRecords++;
             }
-
             catch(const invalid_argument& e)
             {
-                cout << "Skipping invalid numeric conversion: " << line
-                     << " (" << e.what() << ")" << endl;
+                cout << "Skipping invalid numeric conversion: " << line << endl;
             }
             catch(const out_of_range& e)
             {
-                cout << "Skipping out-of-range numeric value: " << line
-                     << " (" << e.what() << ")" << endl;
+                cout << "Skipping out-of-range numeric value: " << line << endl;
             }
         }
 
+        // Build BSTs for each month
         Vector<int> yearKeys;
         tempData.GetKeys(yearKeys);
         for(int y = 0; y < yearKeys.GetSize(); y++)
@@ -272,7 +271,6 @@ bool WeatherLog::LoadData()
             }
 
             Map<int, Vector<RecNode>>& months = tempData[yearKey];
-
             Vector<int> monthKeys;
             months.GetKeys(monthKeys);
 
@@ -289,6 +287,7 @@ bool WeatherLog::LoadData()
                 InsertMiddle(m_data[yearKey][monthKey], nodes, 0, nodes.GetSize() - 1);
             }
         }
+
         csvFile.close();
     }
 
@@ -297,7 +296,7 @@ bool WeatherLog::LoadData()
     return true;
 }
 
-// 1. Average wind speed and SD for a month/year
+// Display average wind speed and standard deviation for a specific month/year
 void WeatherLog::DisplayAvgSpeed(int month, int year)
 {
     if (!m_data.Contains(year) || !m_data[year].Contains(month))
@@ -306,45 +305,44 @@ void WeatherLog::DisplayAvgSpeed(int month, int year)
         return;
     }
 
+    // Collect all nodes in-order
     Vector<RecNode> nodes;
     g_traverseBuffer = &nodes;
     m_data[year][month].InOrder(CollectRecNode);
     g_traverseBuffer = nullptr;
 
-    if (nodes.GetSize() == 0)
+    if(nodes.GetSize() == 0)
     {
-        cout << "No data for " << month << "/" << year << endl;
         return;
     }
 
+    // Extract speeds
     Vector<float> speeds;
-    for (int i = 0; i < nodes.GetSize(); i++)
+    for(int i = 0; i < nodes.GetSize(); i++)
     {
         speeds.Insert(speeds.GetSize(), nodes[i].rec.GetSpeed());
     }
 
+    // Compute mean and standard deviation
     float sum = 0;
-    for (int i = 0; i < speeds.GetSize(); i++)
+    for(int i = 0; i < speeds.GetSize(); i++)
     {
         sum += speeds[i];
     }
-
     float avg = sum / speeds.GetSize();
 
     float sumSq = 0;
-    for (int i = 0; i < speeds.GetSize(); i++)
+    for(int i = 0; i < speeds.GetSize(); i++)
     {
         sumSq += (speeds[i] - avg) * (speeds[i] - avg);
     }
-
     float sd = (speeds.GetSize() > 1) ? sqrt(sumSq / (speeds.GetSize() - 1)) : 0;
-
 
     cout << "Month: " << month << " Year: " << year
          << " | Avg Speed: " << avg << " | SD: " << sd << endl;
 }
 
-// 2. Average temperature and SD for each month of a year
+// Display average temperature and SD for each month of a year
 void WeatherLog::DisplayAvgTempSD(int year)
 {
     if(!m_data.Contains(year))
@@ -354,7 +352,6 @@ void WeatherLog::DisplayAvgTempSD(int year)
     }
 
     Map<int, Bst<RecNode>>& months = m_data[year];
-
     Vector<int> monthKeys;
     months.GetKeys(monthKeys);
 
@@ -364,12 +361,11 @@ void WeatherLog::DisplayAvgTempSD(int year)
 
         Vector<RecNode> nodes;
         g_traverseBuffer = &nodes;
-        Bst<RecNode>& bst = months[month];
-        bst.InOrder(CollectRecNode);
+        months[month].InOrder(CollectRecNode);
         g_traverseBuffer = nullptr;
 
         Vector<float> temps;
-        for (int i = 0; i < nodes.GetSize(); i++)
+        for(int i = 0; i < nodes.GetSize(); i++)
         {
             temps.Insert(temps.GetSize(), nodes[i].rec.GetAmbAirTemp());
         }
@@ -379,12 +375,12 @@ void WeatherLog::DisplayAvgTempSD(int year)
             continue;
         }
 
+        // Compute mean and standard deviation
         float sum = 0.0f;
         for(int i = 0; i < temps.GetSize(); i++)
         {
             sum += temps[i];
         }
-
         float avg = sum / temps.GetSize();
 
         float sumSq = 0.0f;
@@ -392,7 +388,6 @@ void WeatherLog::DisplayAvgTempSD(int year)
         {
             sumSq += (temps[i] - avg) * (temps[i] - avg);
         }
-
         float sd = (temps.GetSize() > 1) ? sqrt(sumSq / (temps.GetSize() - 1)) : 0.0f;
 
         cout << "Month: " << month
@@ -401,6 +396,7 @@ void WeatherLog::DisplayAvgTempSD(int year)
     }
 }
 
+// Compute Pearson correlation coefficient
 float sPCC(const Vector<float>& X, const Vector<float>& Y)
 {
     int n = X.GetSize();
@@ -419,9 +415,7 @@ float sPCC(const Vector<float>& X, const Vector<float>& Y)
     float meanX = sumX / n;
     float meanY = sumY / n;
 
-    float numerator = 0.0f;
-    float denomX = 0.0f, denomY = 0.0f;
-
+    float numerator = 0.0f, denomX = 0.0f, denomY = 0.0f;
     for(int i = 0; i < n; i++)
     {
         float dx = X[i] - meanX;
@@ -439,13 +433,15 @@ float sPCC(const Vector<float>& X, const Vector<float>& Y)
     return numerator / sqrt(denomX * denomY);
 }
 
+// Display Pearson correlation coefficients for specified month
 void WeatherLog::DisplaySPCC(int month)
 {
-    Vector<float> S, T, R;
+    Vector<float> S, T, R; // Speeds, Temps, Solar
 
-    // Collect all data for specified month across all years
+    // Collect data across all years
     Vector<int> yearKeys;
     m_data.GetKeys(yearKeys);
+
     for(int y = 0; y < yearKeys.GetSize(); y++)
     {
         int yearKey = yearKeys[y];
@@ -455,10 +451,9 @@ void WeatherLog::DisplaySPCC(int month)
             continue;
         }
 
-        Bst<RecNode>& bst = months[month];
         Vector<RecNode> nodes;
         g_traverseBuffer = &nodes;
-        bst.InOrder(CollectRecNode);
+        months[month].InOrder(CollectRecNode);
         g_traverseBuffer = nullptr;
 
         for(int i = 0; i < nodes.GetSize(); i++)
@@ -480,6 +475,7 @@ void WeatherLog::DisplaySPCC(int month)
     cout << "T_R: " << TR << endl;
 }
 
+// Compute Mean Absolute Deviation
 float MeanAbsoluteDeviation(const Vector<float>& data, float mean)
 {
     float mad = 0.0f;
@@ -491,6 +487,7 @@ float MeanAbsoluteDeviation(const Vector<float>& data, float mean)
     return (n > 0) ? (mad / n) : 0.0f;
 }
 
+// Display combined stats (speed, temp, solar) with SD and MAD, output CSV
 void WeatherLog::DisplaySpeedTempSolarRadWithMAD(int year)
 {
     ofstream file("WindTempSolar.csv");
@@ -512,10 +509,9 @@ void WeatherLog::DisplaySpeedTempSolarRadWithMAD(int year)
             continue;
         }
 
-        Bst<RecNode>& bst = months[month];
         Vector<RecNode> nodes;
         g_traverseBuffer = &nodes;
-        bst.InOrder(CollectRecNode);
+        months[month].InOrder(CollectRecNode);
         g_traverseBuffer = nullptr;
 
         Vector<float> speeds, temps, solar;
@@ -524,7 +520,7 @@ void WeatherLog::DisplaySpeedTempSolarRadWithMAD(int year)
             WeatherRec& rec = nodes[i].rec;
             speeds.Insert(speeds.GetSize(), rec.GetSpeed());
             temps.Insert(temps.GetSize(), rec.GetAmbAirTemp());
-            solar.Insert(solar.GetSize(), rec.GetSolarRad() * 0.0001667f); // convert to kWh/m2
+            solar.Insert(solar.GetSize(), rec.GetSolarRad() * 0.0001667f); // kWh/m2
         }
 
         int n = speeds.GetSize();
@@ -534,37 +530,37 @@ void WeatherLog::DisplaySpeedTempSolarRadWithMAD(int year)
         }
 
         // Compute averages
-        float sumSpeed = 0, sumTemp = 0, sumSolar = 0;
+        float avgSpeed = 0, avgTemp = 0, totalSolar = 0;
         for(int i = 0; i < n; i++)
         {
-            sumSpeed += speeds[i];
-            sumTemp += temps[i];
-            sumSolar += solar[i];
+            avgSpeed += speeds[i];
+            avgTemp += temps[i];
+            totalSolar += solar[i];
         }
-        float avgSpeed = sumSpeed / n;
-        float avgTemp = sumTemp / n;
-        float totalSolar = sumSolar;
+        avgSpeed /= n;
+        avgTemp /= n;
 
         // Compute standard deviations
-        float sumSqSpeed = 0, sumSqTemp = 0;
+        float sdSpeed = 0, sdTemp = 0;
         for(int i = 0; i < n; i++)
         {
-            sumSqSpeed += (speeds[i] - avgSpeed) * (speeds[i] - avgSpeed);
-            sumSqTemp += (temps[i] - avgTemp) * (temps[i] - avgTemp);
+            sdSpeed += (speeds[i] - avgSpeed) * (speeds[i] - avgSpeed);
+            sdTemp += (temps[i] - avgTemp) * (temps[i] - avgTemp);
         }
-        float sdSpeed = (n > 1) ? sqrt(sumSqSpeed / (n - 1)) : 0.0f;
-        float sdTemp = (n > 1) ? sqrt(sumSqTemp / (n - 1)) : 0.0f;
+        sdSpeed = (n > 1) ? sqrt(sdSpeed / (n - 1)) : 0.0f;
+        sdTemp = (n > 1) ? sqrt(sdTemp / (n - 1)) : 0.0f;
 
         // Compute MAD
         float madSpeed = MeanAbsoluteDeviation(speeds, avgSpeed);
         float madTemp = MeanAbsoluteDeviation(temps, avgTemp);
 
-        // Print to CSV
+        // Write row to CSV
         file << month << ","
              << avgSpeed << "(" << sdSpeed << "," << madSpeed << "),"
              << avgTemp << "(" << sdTemp << "," << madTemp << "),"
              << totalSolar << "\n";
 
+        // Display on console
         cout << "Month " << month
              << " | Avg Speed: " << avgSpeed << " (SD:" << sdSpeed << ", MAD:" << madSpeed << ")"
              << " | Avg Temp: " << avgTemp << " (SD:" << sdTemp << ", MAD:" << madTemp << ")"

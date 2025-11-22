@@ -10,96 +10,115 @@ using std::ostream;
 
 /**
  * @class Date
- * @brief Represents a calendar date (day, month, year).
+ * @brief Encapsulates a calendar date (day, month, year).
  *
- * The Date class provides getters and setters for the day, month,
- * and year. It also supports input/output stream operations.
+ * The Date class provides methods for setting and retrieving individual
+ * date components, comparing dates, and formatted input/output through
+ * stream operators.
  */
 class Date
 {
 public:
     /**
-     * @brief Default constructor.
+     * @brief Constructs a Date with a default value.
      *
-     * Initializes the date to 1/1/1900.
+     * Initializes the date to 1 January 1900.
      */
     Date();
 
     /**
-     * @brief Parameterized constructor.
+     * @brief Constructs a Date with specified values.
      *
-     * @param m_day Day of the month (1-31).
-     * @param m_month Month (1-12).
-     * @param m_year Year (>0).
+     * @param day   Day of the month (1–31).
+     * @param month Month of the year (1–12).
+     * @param year  Year (> 0).
      */
     Date(int day, int month, int year);
 
     /**
-     * @brief Sets the date.
+     * @brief Sets the date to the specified values.
      *
-     * @param day Day of the month (1-31).
-     * @param month Month (1-12).
-     * @param year Year (>0).
+     * @param day   Day of the month (1–31).
+     * @param month Month of the year (1–12).
+     * @param year  Year (> 0).
      *
-     * @throws invalid_argument if day, month, or year are out of valid range.
+     * @throws std::invalid_argument If any component is outside its valid range.
      */
     void SetDate(int day, int month, int year);
 
     /**
-     * @brief Retrieves the day.
-     * @return Day of the month.
+     * @brief Returns the day of the month.
+     * @return Integer representing the day.
      */
     int GetDay() const;
 
     /**
-     * @brief Retrieves the month.
-     * @return Month number.
+     * @brief Returns the month number.
+     * @return Integer between 1 and 12.
      */
     int GetMonth() const;
 
     /**
-     * @brief Retrieves the year.
-     * @return Year.
+     * @brief Returns the year.
+     * @return Integer representing the year.
      */
     int GetYear() const;
 
     /**
-     * @brief Retrieves the month name.
-     * @return Name of the month (e.g., "January").
+     * @brief Returns the full month name.
+     * @return A string such as "January".
      */
     string GetMonthNames() const;
 
+    /**
+     * @brief Compares two dates chronologically.
+     *
+     * @param other The Date to compare with.
+     * @return True if this date occurs earlier than @p other.
+     */
     bool operator<(const Date& other) const;
 
+    /**
+     * @brief Checks if two dates are identical.
+     *
+     * @param other The Date to compare with.
+     * @return True if both dates have the same day, month, and year.
+     */
     bool operator==(const Date& other) const;
 
 private:
-    int m_day;   ///< Day of the month
-    int m_month; ///< Month (1-12)
-    int m_year;  ///< Year
+    int m_day;    ///< Day of the month.
+    int m_month;  ///< Month number (1–12).
+    int m_year;   ///< Year value.
 };
 
 /**
- * @brief Reads a Date object from an input stream.
+ * @brief Extracts a Date from an input stream.
  *
- * Expected format:
+ * Expected input format:
+ * @code
  * day month year
+ * @endcode
  *
- * @param input Input stream to read from.
- * @param date Date object to populate.
+ * @param input Stream to read from.
+ * @param date  Date object to populate.
  * @return Reference to the input stream.
  */
-istream &operator>>(istream &input, Date &date);
+istream& operator>>(istream& input, Date& date);
 
 /**
- * @brief Writes a Date object to an output stream.
+ * @brief Inserts a formatted Date into an output stream.
  *
- * Output format: day MonthName year (e.g., 3 March 2025)
+ * Output format:
+ * @code
+ * day MonthName year
+ * // Example: 3 March 2025
+ * @endcode
  *
- * @param os Output stream to write to.
- * @param date Date object to output.
+ * @param os    Stream to write to.
+ * @param date  Date object to output.
  * @return Reference to the output stream.
  */
-ostream &operator<<(ostream &os, const Date &date);
+ostream& operator<<(ostream& os, const Date& date);
 
 #endif // DATE_H_INCLUDED

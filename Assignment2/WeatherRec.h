@@ -10,118 +10,114 @@ using std::ostream;
 
 /**
  * @class WeatherRec
- * @brief Represents a single weather record including date, time, wind speed, solar radiation, and air temperature.
+ * @brief Represents a single weather observation.
+ *
+ * A WeatherRec object stores:
+ *   - The date of observation
+ *   - The time of observation
+ *   - Wind speed (m/s)
+ *   - Solar radiation (W/m²)
+ *   - Ambient air temperature (°C)
+ *
+ * Each record can generate a DateTimeKey, which provides a unique
+ * and fully sortable timestamp suitable for use as the key in a BST.
  */
 class WeatherRec
 {
 public:
+
     /**
      * @brief Default constructor.
      *
-     * Initializes all numeric values to 0 and date/time to default.
+     * Initializes:
+     *   - Date and Time to their default-constructed values
+     *   - Wind speed, solar radiation, and temperature to 0.0
      */
     WeatherRec();
 
     /**
-     * @brief Parameterized constructor.
-     * @param d Date of the record.
-     * @param t Time of the record.
+     * @brief Parameterized constructor for creating a complete weather record.
+     *
+     * @param d Date of the observation.
+     * @param t Time of the observation.
      * @param speed Wind speed in m/s.
-     * @param solarRad Solar radiation in W/m^2.
-     * @param ambAirTemp Ambient air temperature in degrees Celsius.
+     * @param solarRad Solar radiation in W/m².
+     * @param ambAirTemp Ambient air temperature in °C.
      */
     WeatherRec(const Date& d, const Time& t, float speed, float solarRad, float ambAirTemp);
 
-    /**
-     * @brief Retrieves the date of the record.
-     * @return Reference to the Date object.
-     */
+    /** @brief Returns the observation date. */
     const Date& GetDate() const;
 
-    /**
-     * @brief Retrieves the time of the record.
-     * @return Reference to the Time object.
-     */
+    /** @brief Returns the observation time. */
     const Time& GetTime() const;
 
     /**
-     * @brief Retrieves the month of the record.
-     * @return Month number (1-12).
+     * @brief Returns the month of the observation.
+     * @return Integer in the range 1–12.
      */
     int GetMonth() const;
 
     /**
-     * @brief Retrieves the year of the record.
-     * @return Year.
+     * @brief Returns the year of the observation.
      */
     int GetYear() const;
 
-    /**
-     * @brief Retrieves the wind speed.
-     * @return Wind speed in m/s.
-     */
+    /** @brief Returns the wind speed in m/s. */
     float GetSpeed() const;
 
-    /**
-     * @brief Retrieves the solar radiation.
-     * @return Solar radiation in W/m^2.
-     */
+    /** @brief Returns the solar radiation in W/m². */
     float GetSolarRad() const;
 
-    /**
-     * @brief Retrieves the ambient air temperature.
-     * @return Air temperature in degrees Celsius.
-     */
+    /** @brief Returns the ambient air temperature in °C. */
     float GetAmbAirTemp() const;
 
-    /**
-     * @brief Sets the date of the record.
-     * @param d Date object to set.
-     */
+    /** @brief Sets the observation date. */
     void SetDate(const Date& d);
 
-    /**
-     * @brief Sets the time of the record.
-     * @param t Time object to set.
-     */
+    /** @brief Sets the observation time. */
     void SetTime(const Time& t);
 
-    /**
-     * @brief Sets the wind speed.
-     * @param speed Wind speed in m/s.
-     */
+    /** @brief Sets the wind speed in m/s. */
     void SetSpeed(float speed);
 
-    /**
-     * @brief Sets the solar radiation.
-     * @param solarRad Solar radiation in W/m^2.
-     */
+    /** @brief Sets the solar radiation in W/m². */
     void SetSolarRad(float solarRad);
 
-    /**
-     * @brief Sets the ambient air temperature.
-     * @param ambAirTemp Air temperature in degrees Celsius.
-     */
+    /** @brief Sets the air temperature in °C. */
     void SetAmbAirTemp(float ambAirTemp);
 
     /**
-     * @brief Generates a DateTimeKey for BST insertion.
+     * @brief Generates a sortable key combining date and time.
+     *
+     * The DateTimeKey sorts in this order:
+     *   1. Year
+     *   2. Month
+     *   3. Day
+     *   4. Hour
+     *   5. Minute
+     *
+     * @return A DateTimeKey object representing the timestamp of this record.
      */
     DateTimeKey GetDateTimeKey() const;
 
 private:
-    Date m_date;       /**< Date of the record */
-    Time m_time;       /**< Time of the record */
-    float m_speed;     /**< Wind speed in m/s */
-    float m_solarRad;  /**< Solar radiation in W/m^2 */
-    float m_airTemp;   /**< Ambient air temperature in Celsius */
+    Date m_date;       /**< Observation date. */
+    Time m_time;       /**< Observation time. */
+    float m_speed;     /**< Wind speed (m/s). */
+    float m_solarRad;  /**< Solar radiation (W/m²). */
+    float m_airTemp;   /**< Ambient air temperature (°C). */
 };
 
 /**
- * @brief Outputs a WeatherRec object to a stream.
+ * @brief Stream insertion operator for WeatherRec.
+ *
+ * Outputs the record in a readable format for debugging, logs,
+ * and text-based displays.
+ *
  * @param os Output stream.
- * @param wr WeatherRec object to output.
- * @return Reference to the output stream.
+ * @param wr WeatherRec instance to print.
+ * @return Reference to the modified output stream.
  */
 ostream& operator<<(ostream& os, const WeatherRec& wr);
 

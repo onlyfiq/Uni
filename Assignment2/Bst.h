@@ -7,15 +7,20 @@ using std::endl;
 
 /**
  * @class Bst
- * @brief A templated Binary Search Tree (BST) class.
+ * @brief A templated Binary Search Tree (BST) implementation.
  *
- * This class provides functionality for storing elements in a binary search tree
- * structure. Supported operations include insertion, searching, deletion,
- * and depth-first traversals (in-order, pre-order, post-order).
+ * This class stores elements in a binary search tree structure, allowing
+ * fast insertion, lookup, deletion, and depth-first traversals. Values
+ * stored in the tree must support the <, >, and == comparison operators.
  *
- * The type T must support <, >, and == comparison operators.
+ * Supported operations:
+ * - Insert a new value
+ * - Search for a value
+ * - Delete a specific value
+ * - Clear the entire tree
+ * - In-order, pre-order, and post-order traversal
  *
- * @tparam T Data type stored inside the BST.
+ * @tparam T Type of elements stored in the BST.
  */
 template <class T>
 class Bst
@@ -27,27 +32,35 @@ public:
     Bst();
 
     /**
-     * @brief Destructor. Recursively frees all nodes.
+     * @brief Destructor.
+     *
+     * Recursively deallocates all nodes in the tree.
      */
     ~Bst();
 
     /**
-     * @brief Copy constructor. Performs a deep copy.
-     * @param other The BST to copy.
+     * @brief Copy constructor.
+     *
+     * Creates a deep copy of another BST.
+     *
+     * @param other Tree to copy.
      */
     Bst(const Bst& other);
 
     /**
-     * @brief Copy assignment operator. Performs deep copy with cleanup.
-     * @param other The BST to assign from.
-     * @return Reference to *this.
+     * @brief Copy assignment operator.
+     *
+     * Replaces the contents of this BST with a deep copy of @p other.
+     *
+     * @param other Tree to copy from.
+     * @return Reference to this instance.
      */
     Bst& operator=(const Bst& other);
 
     /**
-     * @brief Inserts a new value into the BST.
+     * @brief Inserts a value into the BST.
      *
-     * Duplicate values are ignored.
+     * Duplicate values are ignored and not inserted.
      *
      * @param value The value to insert.
      */
@@ -55,141 +68,120 @@ public:
 
     /**
      * @brief Searches for a value in the BST.
+     *
      * @param value The value to locate.
-     * @return True if found, false otherwise.
+     * @return True if the value exists, false otherwise.
      */
     bool Search(const T& value) const;
 
     /**
-     * @brief Removes all nodes and resets the tree to empty.
+     * @brief Removes all nodes in the tree and resets it to empty.
      */
     void DeleteTree();
 
     /**
      * @brief Deletes a node containing the specified value.
-     * @param value Value to remove.
+     *
+     * If the value does not exist, no changes are made.
+     *
+     * @param value The value to remove.
      */
     void DeleteNode(const T& value);
 
     /**
-     * @brief Performs in-order traversal.
+     * @brief Performs an in-order traversal.
      *
-     * Order: Left → Root → Right
+     * Order: **Left → Root → Right**
+     * Produces sorted output if the BST contains no duplicates.
      *
-     * @param func A function pointer applied to each visited value.
+     * @param func Function applied to each visited node's value.
      */
     void InOrder(void (*func)(const T&)) const;
 
     /**
-     * @brief Performs pre-order traversal.
+     * @brief Performs a pre-order traversal.
      *
-     * Order: Root → Left → Right
+     * Order: **Root → Left → Right**
      *
-     * @param func A function pointer applied to each visited value.
+     * @param func Function applied to each visited node's value.
      */
     void PreOrder(void (*func)(const T&)) const;
 
     /**
-     * @brief Performs post-order traversal.
+     * @brief Performs a post-order traversal.
      *
-     * Order: Left → Right → Root
+     * Order: **Left → Right → Root**
      *
-     * @param func A function pointer applied to each visited value.
+     * @param func Function applied to each visited node's value.
      */
     void PostOrder(void (*func)(const T&)) const;
-
-    /**
-     * @brief Ensures the BST invariant holds for all nodes.
-     *
-     * BST property checked:
-     * - Left subtree values < node value
-     * - Right subtree values > node value
-     *
-     * @return True if invariant is satisfied.
-     */
-    bool DebugCheckInvariant() const;
 
 private:
 
     /**
      * @struct Node
-     * @brief Represents a single node in the BST.
+     * @brief Represents a single BST node.
      */
     struct Node
     {
         T data;        ///< Value stored at this node.
-        Node* left;    ///< Pointer to left subtree.
-        Node* right;   ///< Pointer to right subtree.
+        Node* left;    ///< Pointer to the left child.
+        Node* right;   ///< Pointer to the right child.
     };
 
-    Node* root;  ///< Pointer to the root of the tree.
-
-    // ====================== Helper Functions ======================
+    Node* root; ///< Pointer to the root of the BST.
 
     /**
      * @brief Recursive insert helper.
      * @param node Current subtree root.
      * @param value Value to insert.
-     * @return Updated subtree root.
+     * @return Updated subtree root pointer.
      */
     Node* insert(Node* node, const T& value);
 
     /**
      * @brief Recursive search helper.
      * @param node Current subtree root.
-     * @param value Value to find.
-     * @return True if found.
+     * @param value Value to locate.
+     * @return True if the value is found.
      */
     bool search(Node* node, const T& value) const;
 
     /**
      * @brief Recursive in-order traversal helper.
-     * @param node Current subtree root.
-     * @param func Function applied to each node value.
      */
     void inOrder(const Node* node, void (*func)(const T&)) const;
 
     /**
      * @brief Recursive pre-order traversal helper.
-     * @param node Current subtree root.
-     * @param func Function applied to each node value.
      */
     void preOrder(const Node* node, void (*func)(const T&)) const;
 
     /**
      * @brief Recursive post-order traversal helper.
-     * @param node Current subtree root.
-     * @param func Function applied to each node value.
      */
     void postOrder(const Node* node, void (*func)(const T&)) const;
 
     /**
      * @brief Recursive destroy helper.
-     * @param node Current subtree root.
+     * @param node Subtree root to delete.
      */
     void deleteTree(Node* node);
 
     /**
-     * @brief Recursive node deletion helper.
+     * @brief Recursive delete-node helper.
      * @param node Current subtree root.
      * @param value Value to remove.
-     * @return Updated subtree root.
+     * @return Updated subtree root pointer.
      */
     Node* deleteNode(Node* node, const T& value);
 
     /**
      * @brief Recursively clones a subtree.
-     * @param node Subtree root to copy.
-     * @return Pointer to new cloned subtree.
+     * @param node Root of the subtree to clone.
+     * @return New subtree root.
      */
     Node* copyTree(Node* node);
-
-    /**
-     * @brief Recursive helper to validate BST ordering.
-     * @param node Current subtree root.
-     * @return True if subtree satisfies BST rules.
-     */
-    bool checkInvariant(Node* node) const;
 };
 
 // --- Implementation ---
@@ -413,32 +405,5 @@ void Bst<T>::postOrder(const Node* node,void (*func)(const T&)) const
         func(node->data);
     }
 }
-
-template <class T>
-bool Bst<T>::DebugCheckInvariant() const
-{
-    return checkInvariant(root);
-}
-
-template <class T>
-bool Bst<T>::checkInvariant(Node* node) const
-{
-    if (node == nullptr)
-    {
-        return true;
-    }
-
-    if (node->left && node->left->data >= node->data)
-    {
-        return false;
-    }
-    if (node->right && node->right->data <= node->data)
-    {
-        return false;
-    }
-
-    return checkInvariant(node->left) && checkInvariant(node->right);
-}
-
 
 #endif // BST_H_INCLUDED

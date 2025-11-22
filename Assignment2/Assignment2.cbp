@@ -44,10 +44,7 @@
 			<Option link="0" />
 		</Unit>
 		<Unit filename="EncapVect.h" />
-		<Unit filename="Main.cpp">
-			<Option compile="0" />
-			<Option link="0" />
-		</Unit>
+		<Unit filename="Main.cpp" />
 		<Unit filename="Map.h" />
 		<Unit filename="MapTest.cpp">
 			<Option compile="0" />

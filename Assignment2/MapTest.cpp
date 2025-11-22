@@ -1,8 +1,21 @@
-// Map.cpp
 #include <iostream>
 #include <string>
 #include "Map.h"
 using namespace std;
+
+template <typename K, typename V>
+void PrintMap(const Map<K,V>& m)
+{
+    Vector<K> keys;
+    m.GetKeys(keys);
+
+    for (int i = 0; i < keys.GetSize(); i++)
+    {
+        const K& key = keys[i];
+        cout << "Key: " << key
+             << "  Value: " << m.At(key) << endl;
+    }
+}
 
 int main()
 {
@@ -14,29 +27,22 @@ int main()
     studentResults[102] = 93.0;
     studentResults[103] = 75.5;
 
-    // Display using KeyAt and ValueAt
-    for (int i = 0; i < studentResults.Size(); i++)
-    {
-        cout << "Key: " << studentResults.KeyAt(i)
-             << "  Value: " << studentResults.ValueAt(i) << endl;
-    }
+    PrintMap(studentResults);
 
-    cout << "\nContains 102? " << (studentResults.Contains(102) ? "Yes" : "No") << endl;
+    cout << "\nContains 102? "
+         << (studentResults.Contains(102) ? "Yes" : "No") << endl;
+
     cout << "At(103) = " << studentResults.At(103) << endl;
 
 
     cout << "\n=== TEST 2: string -> string (User accounts) ===\n";
     Map<string, string> userAccounts;
 
-    userAccounts["alice"] = "password123";
-    userAccounts["bob"]   = "hunter2";
+    userAccounts["alice"]   = "password123";
+    userAccounts["bob"]     = "hunter2";
     userAccounts["charlie"] = "letmein";
 
-    for (int i = 0; i < userAccounts.Size(); i++)
-    {
-        cout << "Key: " << userAccounts.KeyAt(i)
-             << "  Value: " << userAccounts.ValueAt(i) << endl;
-    }
+    PrintMap(userAccounts);
 
 
     cout << "\n=== TEST 3: string -> int (Word count) ===\n";
@@ -45,14 +51,10 @@ int main()
     wordCount["hello"] = 3;
     wordCount["world"] = 7;
 
-    // Update test (operator[] changes existing)
+    // Update test (operator[] overwrites existing)
     wordCount["hello"] = 4;
 
-    for (int i = 0; i < wordCount.Size(); i++)
-    {
-        cout << "Key: " << wordCount.KeyAt(i)
-             << "  Value: " << wordCount.ValueAt(i) << endl;
-    }
+    PrintMap(wordCount);
 
 
     cout << "\n=== TEST 4: GetKeys() ===\n";
@@ -63,6 +65,14 @@ int main()
     {
         cout << "Key[" << i << "]: " << keyList[i] << endl;
     }
+
+
+    cout << "\n=== TEST 5: Clear() ===\n";
+    wordCount.Clear();
+
+    cout << "Size after Clear(): " << wordCount.Size() << endl;
+    cout << "Contains(\"hello\")? "
+         << (wordCount.Contains("hello") ? "Yes" : "No") << endl;
 
     return 0;
 }
